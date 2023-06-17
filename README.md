@@ -1,2 +1,1 @@
-# pi.lk-website
-planning of website
+# pi.lk
