@@ -1,5 +1,6 @@
 ---
-premalink:/about/
+permalink: /about/
+title: "About"
 ---
 
 #about
