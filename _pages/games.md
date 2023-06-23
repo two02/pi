@@ -1,6 +1,6 @@
 ---
 layout: splash
-premalink: /games/
+permalink: /games/
 title: "games"
 
 ---
