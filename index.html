@@ -33,15 +33,13 @@ author_profile: true
 @media screen and (max-width: 600px) {
   .column  {
     width: 100%;
+    transition: all .2s ease-in-out; 
   }
 }
 
-  .grow { 
-transition: all .2s ease-in-out; 
-}
 
-.grow:hover { 
-transform: scale(1.1); 
+.column:hover { 
+transform: scale(1.2); 
 }
 </style>
 
@@ -49,7 +47,7 @@ transform: scale(1.1);
 අද මොනවද හදන්නේ?..
 </h1>
 <div class="row">
-  <div class="column" "grow" style="background-color:#aaa;">
+  <div class="column" style="background-color:#aaa;">
   <h2>Game එකක් හදමු</h2>
   <p>Physical වගේම screen එකෙත් play කරන්න පුලුවන් games!</p>
   </div>
