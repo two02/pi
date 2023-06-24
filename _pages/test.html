@@ -29,7 +29,7 @@ permalink: /test/
 <div class="timeContainer" id="demo"></div>
 
 <script>
-document.getElementById('demo').style.background = 'url('https://img.freepik.com/free-photo/3d-render-gift-box-with-ribbon-present-package_107791-15850.jpg')';
+document.getElementById('demo').style.background = 'url('/static/')';
 
 
 // Set the date we're counting down to
@@ -58,7 +58,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
-    document.getElementById('demo').style.background = 'url('https://i.pinimg.com/originals/fd/2c/1a/fd2c1a96b654e220d09525f006482477.gif')';
+    document.getElementById('demo').style.background = 'url('static/bdgif.gif')';
 
   }
 }, 1000);
