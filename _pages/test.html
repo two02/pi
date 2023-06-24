@@ -29,7 +29,7 @@ permalink: /test/
 <div class="timeContainer" id="demo"></div>
 
 <script>
-document.getElementById('demo').style.background = {% static/giftpng.png %};
+document.getElementById('demo').style.background = {{ 'static/giftpng.png' }};
 
 
 // Set the date we're counting down to
@@ -58,7 +58,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
-    document.getElementById('demo').style.background = 'url({% static/bdgif.gif %})';
+    document.getElementById('demo').style.background = 'url({{ 'static/bdgif.gif' }})';
 
   }
 }, 1000);
