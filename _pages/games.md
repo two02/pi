@@ -3,7 +3,7 @@ layout: splash
 permalink: /games/
 title: "games"
 header:
-  overlay_image: "static/let's build a robot.png"
+  overlay_image: "static/image-removebg-preview.png"
   overlay_filter: 0.5
 ---
 
