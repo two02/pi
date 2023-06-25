@@ -33,7 +33,7 @@ permalink: /tharaka/wishing-happy-birthday-to-sweetest-person-in-world/
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("June 25, 2023 00:00:00").getTime();
+var countDownDate = new Date("June 25, 2024 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -57,7 +57,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Wish You a Happy Birthday!";
+    document.getElementById("demo").innerHTML = "expired";
     document.getElementById('demo').style.backgroundImage = "url({{ 'static/bdgif.gif' | relative_url }})";
 
   }
