@@ -1,7 +1,8 @@
 ---
-layout: splash
+layout: ProjectPages
 permalink: /games/
-title: "games"
+title: "splash"
+overlay_image: "static/let's build a robot.png"
 
 ---
 
