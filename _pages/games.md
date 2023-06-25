@@ -2,7 +2,8 @@
 layout: splash
 permalink: /games/
 title: "games"
-overlay_image: "static/let's build a robot.png"
+header:
+  overlay_image: "static/let's build a robot.png"
 
 ---
 
