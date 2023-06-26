@@ -1,5 +1,6 @@
 ---
 layout: posts
+categories: games
 ---
 
 සාමාන්‍යයෙන් රාස්බෙරි පයි එකක් setup කරගන්නව වගේම තමා මේකත් setup කරගන්න තියෙන්නේ. රාස්බෙරි පයි imager එක download කරන් open කරගන්න.
