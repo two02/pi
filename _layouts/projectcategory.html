@@ -1,0 +1,17 @@
+---
+layout:splash
+---
+
+{{ content }}
+
+{% capture category %}{{ page.page_categories | first }}{% endcapture %}
+
+{% for post in site.categories[category] %}
+    <li>
+        <p>
+            <a href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+            </a>
+        </p>
+    </li>
+{% endfor %}
