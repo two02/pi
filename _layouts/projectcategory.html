@@ -46,7 +46,7 @@ layout: splash
 {% for post in site.categories[category] %}
    
         
-        <div class="column" onclick="location.href={{ post.url | relative_url }}">
+        <div class="column" onclick="location.href='{{ post.url | relative_url }}'">
         <div class="card">
             <h3>{{ post.title | escape }}</h3>
         </div>
