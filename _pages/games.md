@@ -2,7 +2,7 @@
 layout: projectcategory
 permalink: /games/
 title: "games"
-categories: games
+categories: [games]
 header:
   overlay_image: "static/image-removebg-preview.png"
   overlay_filter: 0.5
