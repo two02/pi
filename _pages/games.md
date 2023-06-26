@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: projectcategory
 permalink: /games/
 title: "games"
 header:
