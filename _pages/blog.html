@@ -4,7 +4,7 @@ permalink: /blog/
 ---
 
 {% assign blog_categories = 'games', 'hacking' %}
-
+{% assign blog_categories = blog_categories | split: ',' %}
 {% for category in blog_categories %}
 
 <h1>{{ category }}</h1>
