@@ -1,0 +1,12 @@
+---
+layout: splash
+permalink: /blog/
+---
+
+{% assign blog_categories = ['games', 'hacking'] %}
+
+{% for category in blog_categories %}
+
+<h1>{{ category }}</h1>
+
+{% endfor %}
