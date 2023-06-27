@@ -40,10 +40,14 @@ layout: splash
 {{ content }}
 
 {% capture category %}{{ page.categories | first }}{% endcapture %}
-
+{% if category == 'all' %}
+  {% assign posts = site.categories %}
+{% else %}
+    {% assign posts = site.categories[category] %}
+{% endif %}
 <div class="row">
 
-{% for post in site.categories[category] %}
+{% for post in posts %}
    
         
         <div class="column" onclick="location.href='{{ post.url | relative_url }}'">
