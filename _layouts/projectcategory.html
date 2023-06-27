@@ -41,7 +41,7 @@ layout: splash
 
 {% capture category %}{{ page.categories | first }}{% endcapture %}
 {% if category == 'all' %}
-  {% assign posts = site.categories %}
+  {% assign posts = site.posts %}
 {% else %}
     {% assign posts = site.categories[category] %}
 {% endif %}
