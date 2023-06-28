@@ -1,6 +1,6 @@
 /* these styles were used in home page cards */
 .myrow {
-    display: flex; /* equal height of the children */
+    overflow: hidden;
 }
 
 
@@ -11,8 +11,9 @@
     padding: 10px;
     margin: 10px 10px 10px 10px;
     border-radius: 25px;
-    transition: all .2s ease-in-out; 
-  
+    transition: all .2s ease-in-out;
+    padding-bottom: 100%;
+    margin-bottom: -100%;  
   }
 
 /* Clear floats after the columns */
