@@ -1,3 +1,4 @@
+/* styles used for cards in index.html */
 
 /* Create four equal columns that floats next to each other */
 .mycolumn {
@@ -6,9 +7,7 @@
     padding: 10px;
     margin: 10px 10px 10px 10px;
     border-radius: 25px;
-    transition: all .2s ease-in-out;
-    padding-bottom: 100%;
-    margin-bottom: -100%;  
+    transition: all .2s ease-in-out; 
   }
 
 /* Clear floats after the columns */
