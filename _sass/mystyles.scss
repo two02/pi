@@ -1,0 +1,10 @@
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 25px;
+    transition: all .2s ease-in-out; 
+  
+  }
