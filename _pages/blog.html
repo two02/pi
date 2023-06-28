@@ -3,11 +3,7 @@ layout: splash
 permalink: /blog/
 ---
 
-{% assign blog_categories = 'games,hacking' %}
-{% assign blog_categories = blog_categories | split: ',' %}
-{% for category in blog_categories %}
-
-    {% for post in site.categories[category] %}
+    {% for post in site.tags[blog] %}
 
     <div onclick="location.href='{{ post.url | relative_url }}'">{{ post.title | escape }}</div>
     {% endfor %}

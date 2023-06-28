@@ -40,11 +40,8 @@ layout: splash
 {{ content }}
 
 {% capture category %}{{ page.categories | first }}{% endcapture %}
-{% if category == 'all' %}
-  {% assign posts = site.posts %}
-{% else %}
-    {% assign posts = site.categories[category] %}
-{% endif %}
+
+    {% assign posts = site.tags[category] %}
 <div class="row">
 
 {% for post in posts %}
