@@ -3,7 +3,7 @@ layout: splash
 permalink: /blog/
 ---
 
-    {% for post in site.tags[blog] %}
+    {% for post in site.tags['blog'] %}
 
     <div onclick="location.href='{{ post.url | relative_url }}'">{{ post.title | escape }}</div>
     {% endfor %}
