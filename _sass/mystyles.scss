@@ -49,7 +49,7 @@
     }
   }
 
-/* Responsive layout - makes all the columns with same hight in big screens */
+/* Responsive layout - makes two columns two rows with same hight in medium screens */
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .myrow  {
     display: table;}
