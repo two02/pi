@@ -46,10 +46,13 @@
   }
 
   /* Responsive layout - makes two of the columns with same hight in big screens */
-  @media screen and (max-width: 900px) and(min-width: 600px) {
-    .myrow .mytworows  {
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+    .mytworows  {
       display: flex;}
     .mycolumn {
       flex: 1;
+    }
+    .myrow {
+      display: table;
     }
   }
