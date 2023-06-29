@@ -2,7 +2,6 @@
 
 /* Create four equal columns that floats next to each other */
 .mycolumn {
-    display: table-cell;
     float: left;
     width: 20%;
     padding: 10px;
@@ -35,4 +34,12 @@
 /* when hover grow */  
   .mycolumn:hover { 
   transform: scale(1.1); 
+  }
+
+  /* Responsive layout - makes all the columns with same hight in big screens */
+  @media screen and (min-width: 900px) {
+    .myrow  {
+      display: flex;
+
+        }
   }
