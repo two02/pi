@@ -39,7 +39,8 @@
   /* Responsive layout - makes all the columns with same hight in big screens */
   @media screen and (min-width: 900px) {
     .myrow  {
-      display: flex;
-
-        }
+      display: flex;}
+    .mycolumn{
+      flex: 1;
+    }
   }
