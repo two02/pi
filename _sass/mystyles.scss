@@ -2,6 +2,7 @@
 
 /* Create four equal columns that floats next to each other */
 .mycolumn {
+    display: table-cell;
     float: left;
     width: 20%;
     padding: 10px;
