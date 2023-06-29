@@ -20,7 +20,7 @@
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 900px) {
     .mycolumn  {
-      width: 30%;
+      width: 40%;
     }
   }
   
@@ -40,9 +40,23 @@
   @media screen and (min-width: 900px) {
     .myrow  {
       display: flex;}
+    .mytworow {
+      flex: 1;
+      display: flex;
+    }
     .mycolumn{
       flex: 1;
     }
   }
 
-  
+/* Responsive layout - makes all the columns with same hight in big screens */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .myrow  {
+    display: table;}
+  .mytworow {
+    display: flex;
+  }
+  .mycolumn{
+    flex: 1;
+  }
+}  
