@@ -50,7 +50,7 @@ layout: archive
 {% for post in posts %}
    
         
-        <div class="column" onclick="location.href='{{ post.url | relative_url }}'">
+        <div class="entries-{{ entries_layout }}" onclick="location.href='{{ post.url | relative_url }}'">
         <div class="card">
             <h3>{{ post.title | escape }}</h3>
         </div>
