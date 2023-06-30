@@ -1,8 +1,10 @@
 ---
-layout: projectcategory
+layout: category
 permalink: /projects/
 title: Projects
-categories: [projects]
+taxonomy: projects
+
+#categories: [projects]
 
 header:
   overlay_image: "static/siteimages/projets featured img.png"
