@@ -12,18 +12,8 @@ classes: wide
   gap: 10px 10px;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
-
 }
 
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
 
 /* Style the counter cards */
 .card {
@@ -46,13 +36,11 @@ classes: wide
 {% for post in posts %}
    
         
-        <div onclick="location.href='{{ post.url | relative_url }}'">
-        <div class="card" style="--bg-img: url({{ "static/image-removebg-preview.png" | relative_url }})">
+        <div class="card" style="--bg-img: url({{ "static/image-removebg-preview.png" | relative_url }})" onclick="location.href='{{ post.url | relative_url }}'">
             <div>
               <h1>{{ post.title | escape }}</h1>
             <p>{{ post.excerpt }} </p>
             </div>
-        </div>
         </div>
         
     
