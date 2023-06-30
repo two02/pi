@@ -39,8 +39,9 @@ classes: wide
         
         <div class="card" style='background-image: url({{ "static/image-removebg-preview.png" | relative_url }});' onclick="location.href='{{ post.url | relative_url }}'">
             <div>
-              <h1>{{ post.title | escape }}</h1>
-            <p style="font-size: 80%;">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
+              <div class="archive__item-teaser"><img scr="{{ "static/image-removebg-preview.png" | relative_url }}"></div>
+              <h1 class=".archive__item-title">{{ post.title | escape }}</h1>
+            <p style="font-size: 80%;" class="archive__item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
             </div>
         </div>
         
