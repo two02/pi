@@ -40,10 +40,12 @@ layout: splash
 </style> -->
 {{ content }}
 
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+
 {% capture category %}{{ page.categories | first }}{% endcapture %}
 
     {% assign posts = site.tags[category] %}
-<div class="row">
+<div class="entries-{{ entries_layout }}">
 
 {% for post in posts %}
    

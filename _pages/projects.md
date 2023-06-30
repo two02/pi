@@ -1,10 +1,9 @@
 ---
-layout: category
+layout: projectcategory
 permalink: /projects/
 title: Projects
-taxonomy: projects
-
-#categories: [projects]
+entries_layout: grid
+categories: [projects]
 
 header:
   overlay_image: "static/siteimages/projets featured img.png"
