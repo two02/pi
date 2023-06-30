@@ -20,7 +20,7 @@ classes: wide
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  font-size: 30px;
+  font-size: 1em;
   text-align: center;
 }
 </style>
@@ -36,7 +36,7 @@ classes: wide
 {% for post in posts %}
    
         
-        <div class="card" style="--bg-img: url({{ "static/image-removebg-preview.png" | relative_url }})" onclick="location.href='{{ post.url | relative_url }}'">
+        <div class="card" style='background-image: url({{ "static/image-removebg-preview.png" | relative_url }});' onclick="location.href='{{ post.url | relative_url }}'">
             <div>
               <h1>{{ post.title | escape }}</h1>
             <p>{{ post.excerpt }} </p>
