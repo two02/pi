@@ -24,6 +24,22 @@ classes: wide
   text-align: center;
   background-size: cover;
 }
+
+/* Responsive layout - makes two columns with same hight in medium screens */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+
+/* Responsive layout - makes one columns with same hight in medium screens */
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+
+  }
+
 </style>
 {{ content }}
 
