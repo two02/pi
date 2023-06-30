@@ -40,7 +40,7 @@ classes: wide
         <div class="card" style='background-image: url({{ "static/image-removebg-preview.png" | relative_url }});' onclick="location.href='{{ post.url | relative_url }}'">
             <div>
               <h1>{{ post.title | escape }}</h1>
-            <p style="font-size: 0.5em;">{{ post.excerpt }} </p>
+            <p style="font-size: 80%;">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
             </div>
         </div>
         
