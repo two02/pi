@@ -75,6 +75,18 @@ classes: wide
   transform: scale(1);
 }
 
+.card h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.75em;
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
 
 
 </style>
@@ -128,8 +140,9 @@ classes: wide
    
         
         <div onclick="location.href='{{ post.url | relative_url }}'">
-        <div class="card">
-            <h3>{{ post.title | escape }}</h3>
+        <div class="card" style="--bg-img: url({{ "static/image-removebg-preview.png" | relative_url }})">
+            <h1>{{ post.title | escape }}</h1>
+            <p>{{ post.excerpt }} </p>
         </div>
         </div>
         
