@@ -22,6 +22,7 @@ classes: wide
   padding: 20px;
   font-size: 1em;
   text-align: center;
+  background-size: cover;
 }
 </style>
 {{ content }}
@@ -39,7 +40,7 @@ classes: wide
         <div class="card" style='background-image: url({{ "static/image-removebg-preview.png" | relative_url }});' onclick="location.href='{{ post.url | relative_url }}'">
             <div>
               <h1>{{ post.title | escape }}</h1>
-            <p>{{ post.excerpt }} </p>
+            <p style="font-size: 0.5em;">{{ post.excerpt }} </p>
             </div>
         </div>
         
