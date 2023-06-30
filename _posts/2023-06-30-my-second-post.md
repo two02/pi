@@ -1,7 +1,7 @@
 ---
 layout: posts
 categories: games
-tags: projects games hacking blog
+tags: projects games robotics blog
 
 header:
   overlay_image: "static/image-removebg-preview.png"

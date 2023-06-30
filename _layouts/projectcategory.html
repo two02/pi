@@ -3,111 +3,15 @@ layout: archive
 classes: wide
 
 ---
+
+
 <style>
-  .cards-wrapper {
+.grid-container {
   display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
-  padding: 4rem;
-  margin: 0 auto;
-  width: max-content;
-}
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+  gap: 10px 10px;
 
-.card {
-  font-family: 'Heebo';
-  --bg-filter-opacity: 0.5;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 20em;
-  width: 15em;
-  font-size: 1.5em;
-  color: white;
-  border-radius: 1em;
-  padding: 1em;
-  /*margin: 2em;*/
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 5em -1em black;
-  transition: all, var(--transition-time);
-  position: relative;
-  overflow: hidden;
-  border: 10px solid #ccc;
-  text-decoration: none;
-}
-
-.card:hover {
-  transform: rotate(0);
-}
-
-.card:before, .card:after {
-  content: '';
-  transform: scale(0);
-  transform-origin: top left;
-  border-radius: 50%;
-  position: absolute;
-  left: -50%;
-  top: -50%;
-  z-index: -5;
-  transition: all, var(--transition-time);
-  transition-timing-function: ease-in-out;
-}
-
-.card:before {
-  background: #ddd;
-  width: 250%;
-  height: 250%;
-}
-
-.card:after {
-  background: white;
-  width: 200%;
-  height: 200%;
-}
-
-.card:hover {
-  color: var(--color);
-}
-
-.card:hover:before, .card:hover:after {
-  transform: scale(1);
-}
-
-.card h1 {
-  margin: 0;
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-.card p {
-  font-size: 0.75em;
-  margin-top: 0.5em;
-  line-height: 2em;
-}
-
-
-
-</style>
-<!-- <style>
-
-/* Float four columns side by side */
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-  border-radius: 25px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* Responsive columns */
@@ -126,7 +30,7 @@ classes: wide
   text-align: center;
   background-color: #aaa;
 }
-</style> -->
+</style>
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
@@ -134,7 +38,7 @@ classes: wide
 {% capture category %}{{ page.categories | first }}{% endcapture %}
 
     {% assign posts = site.tags[category] %}
-<div class="cards-wrapper">
+<div class="grid-container">
 
 {% for post in posts %}
    
