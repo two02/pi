@@ -2,6 +2,10 @@
 layout: posts
 categories: games
 tags: projects games hacking blog
+
+header:
+  overlay_image: "static/image-removebg-preview.png"
+  overlay_filter: 0.5
 ---
 
 සාමාන්‍යයෙන් රාස්බෙරි පයි එකක් setup කරගන්නව වගේම තමා මේකත් setup කරගන්න තියෙන්නේ. රාස්බෙරි පයි imager එක download කරන් open කරගන්න.
