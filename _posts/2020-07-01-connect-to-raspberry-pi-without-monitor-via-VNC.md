@@ -2,12 +2,16 @@
 layout: posts
 categories: hacking
 tags: projects hacking blog
+excerpt_separator: <!--end_excerpt-->
+
 
 header:
   overlay_image: "static/let-us-build-a-robot.png"
   overlay_filter: 0.5
 ---
 සමහර වෙලාවට රාස්බෙරි පයි එකේ කෙලින්ම වැඩ කරන්න අමාරුයි. සමහර වෙලාවට monitor එකක් දිගටම රාස්බෙරි පයි එකට වෙන් කරල තියන්න බෑ. නැත්තම් monitor එකක් ඇත්තෙම නෑ, ඒත් desktop version එක පාවිච්චි කරන්න ඕන.
+<!--end_excerpt-->
+
 කොහොමද ඔයාගෙ laptop එකේ screen එකෙන්ම රාස්බෙරි පයි එකත් පාවිච්චි කරන්න පුලුවන්නම්.
 VNC(Virtual Network Computing) කියන්නෙ එහෙම කරන්න පාවිච්චි කරන්න පුලුවන් graphical desktop sharing system එකක්. VNC Viewer එක ඔයාගේ keyboard, mouse හෝ touch events පවා VNC Server එකට transmit කරනවා. VNC Server එකත් එහෙම එන inputs receive කරල ඒවා update කරනවා screen එකට.එහෙනම් බලමු කොහොමද මේක set up කරගන්නේ කියල.
 
