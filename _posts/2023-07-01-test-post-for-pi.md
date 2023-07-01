@@ -2,7 +2,6 @@
 layout: posts
 categories: hacking
 tags: projects hacking blog
-image: "static/let-us-build-a-robot.png"
 header:
   overlay_image: "static/let-us-build-a-robot.png"
   overlay_filter: 0.5
