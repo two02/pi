@@ -39,15 +39,6 @@ html, body {
   background-color: #1a1a1a;
 }
 
-.file-input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  opacity: 0;
-}
 
 .container-container {
     position: relative;
@@ -87,8 +78,7 @@ html, body {
 
 
 </style>
-<div class="first-layer-div">
-    <input class="file-input" type="file" multiple>
+<div class="first-layer-div" id="drop-area">
     <div class="container-container">
     <div class="text-container">
         <div class="header-container">
@@ -96,7 +86,8 @@ html, body {
         </div>
     </div>
     <div class="button-container">
-        <button class="mybutton">Upload the Image</button>
+        <!--button class="mybutton">Upload the Image</button-->
+        <input class="mybutton" type="file" id="file-selector" multiple>
         <p class="">or drop an image file (.jpeg, .png)</p>
     </div>
     </div>
@@ -104,40 +95,29 @@ html, body {
 
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-const $fileInput = $('.file-input');
-const $droparea = $('.first-layer-div');
-const $delete = $('.item-delete');
+<script>
 
-$fileInput.on('dragenter focus click', function () {
-  $droparea.addClass('is-active');
+  const fileSelector = document.getElementById('file-selector');
+  fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList);
+  });
+
+
+const dropArea = document.getElementById('drop-area');
+
+dropArea.addEventListener('dragover', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  // Style the drag-and-drop as a "copy file" operation.
+  event.dataTransfer.dropEffect = 'copy';
 });
 
-$fileInput.on('dragleave blur drop', function () {
-  $droparea.removeClass('is-active');
-});
-
-$fileInput.on('change', function () {
-  let filesCount = $(this)[0].files.length;
-  let $textContainer = $(this).prev();
-
-  if (filesCount === 1) {
-    let fileName = $(this).val().split('\\').pop();
-    $textContainer.text(fileName);
-    $('.item-delete').css('display', 'inline-block');
-  } else if (filesCount === 0) {
-    $textContainer.text('or drop files here');
-    $('.item-delete').css('display', 'none');
-  } else {
-    $textContainer.text(filesCount + ' files selected');
-    $('.item-delete').css('display', 'inline-block');
-  }
-});
-
-$delete.on('click', function () {
-  $('.file-input').val(null);
-  $('.file-msg').text('or drop files here');
-  $('.item-delete').css('display', 'none');
+dropArea.addEventListener('drop', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  const fileList = event.dataTransfer.files;
+  console.log(fileList);
 });
 </script>
 
