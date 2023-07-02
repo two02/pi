@@ -146,7 +146,7 @@ dropArea.addEventListener('drop', (event) => {
 
 
 function makerequest(fileList) {
-  var file = fileInput.files[0];
+  var file = fileList[0];
   console.log("function is called");
   if (file) {
       var formData = new FormData();
