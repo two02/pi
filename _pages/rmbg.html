@@ -95,6 +95,16 @@ html, body {
 
 }
 
+.result-image-container {
+  margin: auto;
+    width: 50%;
+    height: auto;
+    padding-top: 20px;
+    border-radius: 20px;
+    border-color: cornflowerblue;
+    border-style: ridge;
+}
+
 </style>
 
 
@@ -172,10 +182,11 @@ function makerequest(fileList) {
           resultContainer.innerHTML = `
           <div class="result-image-container">
             <p>Here is your bg removed image</p>
+            <br>
             <img width="300px" src="${data.url}">
             <br>
             <div style="text-align:center">
-              <a href="${data.url}" target="_blank"><p class="btn btn-primary" style="text-align:center">Download</p></a>
+              <a href="${data.url}" target="_blank"><div class="inner">Download</div></a>
             </div>
           </div>
           `; // Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
