@@ -143,6 +143,43 @@ dropArea.addEventListener('drop', (event) => {
 });
 
 
+
+function makerequest(fileList) {
+  var file = fileInput.files[0];
+  if (file) {
+      var formData = new FormData();
+      formData.append("image", file);
+
+      // Replace 'http://example.com/upload' with the URL of your backend server endpoint
+      fetch("https://54.212.156.175:8080/remove-background", {
+        method: "POST",
+        headers: {
+          // Include your authentication headers here
+          Authorization: "Bearer test",
+          // other headers if required
+        },
+        body: formData,
+      })
+      .then((response) => response.json())
+        .then((data) => {
+          var resultContainer = document.getElementById("result");
+          resultContainer.innerHTML = `
+          <div class="container">
+            <img width="300px" src="${data.url}">
+            <br>
+            <div style="text-align:center">
+              <a href="${data.url}" target="_blank"><p class="btn btn-primary" style="text-align:center">Download</p></a>
+            </div>
+          </div>
+          `;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+
+};
+
 </script>
 
 </body>
