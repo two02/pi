@@ -59,7 +59,7 @@ html, body {
     
 }
 
-.button-container {
+.button-and-instructions {
     margin: auto;
     width: 50%;
     height: auto;
@@ -69,8 +69,18 @@ html, body {
     border-style: ridge;
 }
 
+.button-container {
+  display: grid;
+  place-items: center;
+  grid-template-areas: "inner-div";
+}
 
-.mybutton {
+.inner {
+  /* important part */
+  grid-area: inner-div;
+}
+
+.inner .mybutton {
     background-color: cornflowerblue;
     border-radius: 15px;
     padding: 15px 32px;
@@ -85,9 +95,11 @@ html, body {
             <h1>Remove Background</h1>
         </div>
     </div>
-    <div class="button-container">
-        <!--button class="mybutton">Upload the Image</button-->
-        <input class="mybutton" type="file" id="file-selector" multiple>
+    <div class="button-and-instructions">
+      <div class="button-container">
+        <button class="mybutton">Upload the Image</button>
+        <input class="inner" type="file" id="file-selector" multiple>
+      </div>
         <p class="">or drop an image file (.jpeg, .png)</p>
     </div>
     </div>
@@ -107,7 +119,7 @@ html, body {
 const dropArea = document.getElementById('drop-area');
 
 dropArea.addEventListener('dragover', (event) => {
-  event.stopPropagation();
+  event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
   event.preventDefault();
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
