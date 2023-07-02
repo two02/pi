@@ -120,6 +120,7 @@ const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
     console.log(fileList[0]);
+    makerequest(fileList);
   });
 
 
@@ -139,7 +140,7 @@ dropArea.addEventListener('drop', (event) => {
   const fileList = event.dataTransfer.files;
   console.log(fileList);
   document.getElementById("image-display").style.width = "0%";
-
+  makerequest(fileList);
 });
 
 
