@@ -77,9 +77,6 @@ html, body {
   padding: 15px 32px;
 }
 
-.inner:hover {
-  background-color: rgb(100, 149, 237, 0.6);
-}
 
 .image-container {
   height: 100%;
@@ -105,7 +102,7 @@ html, body {
     <div class="button-and-instructions">
       <div class="button-container">
         <input class="inner" style="opacity: 0;" type="file" id="file-selector">
-        <div class="inner">Upload the Image</div>
+        <div class="inner" onmouseover="changewhenhover(this)">UPLOAD IMAGE</div>
       </div>
         <p class="">or drop an image file (.jpeg, .png)</p>
     </div>
@@ -116,6 +113,7 @@ html, body {
 <script>
 const dropArea = document.getElementById('drop-area');
 const fileSelector = document.getElementById('file-selector');
+
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
     console.log(fileList[0]);
@@ -140,6 +138,11 @@ dropArea.addEventListener('drop', (event) => {
   document.getElementById("image-display").style.width = "0%";
 
 });
+
+function changewhenhover(element) {
+  element.style.background-color = "rgb(100, 149, 237, 0.6)";
+}
+
 </script>
 
 </body>
