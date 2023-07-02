@@ -78,12 +78,9 @@ html, body {
 .inner {
   /* important part */
   grid-area: inner-div;
-}
-
-.inner .mybutton {
-    background-color: cornflowerblue;
-    border-radius: 15px;
-    padding: 15px 32px;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+  padding: 15px 32px;
 }
 
 
@@ -97,8 +94,8 @@ html, body {
     </div>
     <div class="button-and-instructions">
       <div class="button-container">
-        <button class="mybutton">Upload the Image</button>
-        <input class="inner" type="file" id="file-selector" multiple>
+        <button class="inner">Upload the Image</button>
+        <input class="inner" style="opacity: 0;" type="file" id="file-selector" multiple>
       </div>
         <p class="">or drop an image file (.jpeg, .png)</p>
     </div>
