@@ -16,6 +16,8 @@ title: "Rmbg"
 html, body {
   height: 100%;
   overflow: hidden;
+  background-color: #AD8F75;
+  font-family: 'Trebuchet MS', sans-serif;
 
 
 }
@@ -29,16 +31,9 @@ html, body {
     align-items: center;
     max-width: 100%;
     padding: 25px;
-    background-color: #fff;
-    border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
     transition: .3s;
 }
-
-.first-layer-div.is-active {
-  background-color: #1a1a1a;
-}
-
 
 .container-container {
     position: relative;
@@ -56,6 +51,8 @@ html, body {
 
 .header-container {
     margin: auto;
+    font-size: 3vw;
+
     
 }
 
@@ -105,7 +102,7 @@ html, body {
     <div class="button-and-instructions">
       <div class="button-container">
         <button class="inner">Upload the Image</button>
-        <input class="inner" style="opacity: 0;" type="file" id="file-selector" multiple>
+        <input class="inner" style="opacity: 0;" type="file" id="file-selector">
       </div>
         <p class="">or drop an image file (.jpeg, .png)</p>
     </div>
@@ -118,7 +115,7 @@ const dropArea = document.getElementById('drop-area');
 const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
-    console.log(fileList);
+    console.log(fileList[0]);
   });
 
 
