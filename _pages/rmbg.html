@@ -173,7 +173,7 @@ const fileSelector = document.getElementById('file-selector');
 
 
 
-dropArea.addEventListener('ondragenter', (event) => {
+dropArea.addEventListener('ondragover', (event) => {
   event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
   event.preventDefault();
   // Style the drag-and-drop as a "copy file" operation.
