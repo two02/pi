@@ -182,6 +182,14 @@ dropArea.addEventListener('dragover', (event) => {
 
 });
 
+dropArea.addEventListener('dragleave', (event) => {
+  event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
+  event.preventDefault();
+  // Style the drag-and-drop as a "copy file" operation.
+  document.getElementById("dnd-image-display").style.width = "0";
+
+});
+
 dropArea.addEventListener('drop', (event) => {
   event.stopPropagation();
   event.preventDefault();
