@@ -206,7 +206,8 @@ dropArea.addEventListener('drop', (event) => {
   event.stopPropagation();
   event.preventDefault();
   const fileList = event.dataTransfer.files;
-  overlayArea.style.width = "0%";
+  overlayArea.style.width = "100%";
+  overlayArea.innerHTML = `removing bg..`;
   makerequest(fileList);
 });
 
@@ -231,6 +232,8 @@ function makerequest(fileList) {
       .then((response) => response.json())
         .then((data) => {
           const resultContainer = document.getElementById("result");
+          overlayArea.innerHTML = ``;
+          overlayArea.style.width = "0%";
           resultContainer.innerHTML = `
           <div class="result-image-container">
             <p>Here is your bg removed image</p>
