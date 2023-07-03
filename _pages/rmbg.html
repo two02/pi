@@ -206,8 +206,6 @@ dropArea.addEventListener('drop', (event) => {
   event.stopPropagation();
   event.preventDefault();
   const fileList = event.dataTransfer.files;
-  overlayArea.style.width = "100%";
-  overlayArea.innerHTML = `removing bg..`;
   makerequest(fileList);
 });
 
@@ -215,6 +213,8 @@ dropArea.addEventListener('drop', (event) => {
 
 function makerequest(fileList) {
   var file = fileList[0];
+  overlayArea.style.width = "100%";
+  overlayArea.innerHTML = `removing bg..`;
   if (file) {
       var formData = new FormData();
       formData.append("image", file);
