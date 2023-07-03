@@ -165,6 +165,7 @@ html, body {
 <script>
 const dropArea = document.getElementById('drop-area');
 const fileSelector = document.getElementById('file-selector');
+const overlayArea = document.getElementById('dnd-image-display')
 
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
@@ -178,18 +179,24 @@ dropArea.addEventListener('dragover', (event) => {
   event.preventDefault();
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
-  document.getElementById("dnd-image-display").style.width = "100%";
-  console.log("drag entered")
+  overlayArea.style.width = "100%";
+  console.log("drag entered");
 });
 
+overlayArea.addEventListener('dragleave', (event) => {
+  event.stopPropagation();
+  event.preventDefault();
+  overlayArea.style.width = "0%";
+  console.log("drag leaved")
+});
 
 dropArea.addEventListener('drop', (event) => {
   event.stopPropagation();
   event.preventDefault();
   const fileList = event.dataTransfer.files;
-  document.getElementById("dnd-image-display").style.width = "0%";
+  overlayArea.style.width = "0%";
   makerequest(fileList);
-  console.log("drop")
+  console.log("drop");
 });
 
 
