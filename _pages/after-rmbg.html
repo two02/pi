@@ -148,11 +148,10 @@ permalink: /img/
     animation-duration: 1s;
   }
 
-  
-@keyframes addDots {
-  from {::after{"."}}
-  to {::after{".."}}
-}
+  .drop-overlay-text::after {
+    content: ".";
+    transition: 0.5s;
+  }
 
   
   
@@ -187,7 +186,7 @@ permalink: /img/
   
   <div class="first-layer-div" id="drop-area">
     <div class="dnd-image-container" id="dnd-image-display"><div class="loader"></div>
-    <div>removing bg..</div></div>
+    <div>removing bg.</div></div>
       <div class="container-container">
       <div id="input-container">
       <div class="text-container">
