@@ -186,6 +186,8 @@ dropArea.addEventListener('dragleave', (event) => {
   event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
   event.preventDefault();
   console.log("drag leave")
+  document.getElementById("dnd-image-display").style.width = "0%";
+
 });
 
 dropArea.addEventListener('drop', (event) => {
@@ -194,6 +196,7 @@ dropArea.addEventListener('drop', (event) => {
   const fileList = event.dataTransfer.files;
   document.getElementById("dnd-image-display").style.width = "0%";
   makerequest(fileList);
+  console.log("drop")
 });
 
 
