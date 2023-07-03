@@ -179,12 +179,13 @@ dropArea.addEventListener('dragenter', (event) => {
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   document.getElementById("dnd-image-display").style.width = "100%";
+  console.log("drag entered")
 });
 
 dropArea.addEventListener('dragleave', (event) => {
   event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
   event.preventDefault();
-  document.getElementById("dnd-image-display").style.width = "0%";
+  console.log("drag leave")
 });
 
 dropArea.addEventListener('drop', (event) => {
