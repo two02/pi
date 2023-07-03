@@ -182,11 +182,11 @@ dropArea.addEventListener('dragover', (event) => {
   overlayArea.style.width = "100%";
 });
 
-overlayArea.addEventListener('dragleave', (event) => {
-  event.stopPropagation();
-  event.preventDefault();
-  overlayArea.style.width = "0%";
-});
+//overlayArea.addEventListener('dragleave', (event) => {
+ // event.stopPropagation();
+ // event.preventDefault();
+ // overlayArea.style.width = "0%";
+//});
 
 dropArea.addEventListener('drop', (event) => {
   event.stopPropagation();
