@@ -144,7 +144,16 @@ permalink: /img/
     font-size: 1vw;
     padding-top: 45%;
     color: azure;
+    animation-name: addDots;
+    animation-duration: 1s;
   }
+
+  
+@keyframes addDots {
+  from {::after{"."}}
+  to {::after{".."}}
+}
+
   
   
   .loader {
@@ -245,7 +254,7 @@ permalink: /img/
     overlayArea.style.width = "100%";
     overlayArea.innerHTML = `
     <div class="loader"></div>
-    <div>removing bg..</div>
+    <div class="drop-overlay-text">removing bg</div>
       `;
     if (file) {
         var formData = new FormData();
