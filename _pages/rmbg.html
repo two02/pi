@@ -189,6 +189,7 @@ dropArea.addEventListener('drop', (event) => {
   const fileList = event.dataTransfer.files;
   document.getElementById("dnd-image-display").style.width = "0%";
   makerequest(fileList);
+  console.log("drop")
 });
 
 
