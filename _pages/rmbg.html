@@ -135,6 +135,12 @@ html, body {
     z-index: 1;
 }
 
+.drop-overlay-text {
+  text-align: center;
+  font-size: 1vw;
+  padding-top: 45%;
+}
+
 </style>
 
 
@@ -180,6 +186,7 @@ dropArea.addEventListener('dragover', (event) => {
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   overlayArea.style.width = "100%";
+  overlayArea.innerHTML = `<div>Drop your image file</div>`
 });
 
 overlayArea.addEventListener('dragleave', (event) => {
