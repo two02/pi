@@ -116,10 +116,10 @@ permalink: /img/
       <div id="result" class="result-container"><div class="result-image-container">
         <p>Here is your bg removed image</p>
         <br>
-        <img width="300px" src="${% /static/image-removebg-preview.png | relative_url %}">
+        <img width="300px" src="${{ /static/image-removebg-preview.png | relative_url }}">
         <br>
         <div style="text-align:center">
-          <a href="{% /static/image-removebg-preview.png | relative_url %}" target="_blank" class="inner" download>DOWNLOAD</a>
+          <a href="{{ /static/image-removebg-preview.png | relative_url }}" target="_blank" class="inner" download>DOWNLOAD</a>
         </div>
       </div></div>
     </div>
