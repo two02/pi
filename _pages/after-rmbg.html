@@ -108,15 +108,21 @@ permalink: /img/
         margin-left: 25%;
         margin-right: 25%;
         margin-bottom: 20%;
+        place-items: center;
     }
     
+    .result-image {
+      max-width: 300px;
+      max-height: 450px;
+
+    }
     </style>
 
     <div class="container-container">
       <div id="result" class="result-container"><div class="result-image-container">
         <p>Here is your bg removed image</p>
         <br>
-        <img width="300px" src="${data.url}">
+        <img class="result-image" src="${data.url}">
         <br>
         <div style="text-align:center">
           <a href="${data.url}" target="_blank" class="inner" download>DOWNLOAD</a>
