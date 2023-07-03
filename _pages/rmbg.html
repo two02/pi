@@ -173,12 +173,19 @@ const fileSelector = document.getElementById('file-selector');
 
 
 
-dropArea.addEventListener('dragover', (event) => {
+dropArea.addEventListener('ondragenter', (event) => {
   event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
   event.preventDefault();
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   document.getElementById("dnd-image-display").style.width = "100%";
+
+});
+
+dropArea.addEventListener('ondragleave', (event) => {
+  event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
+  event.preventDefault();
+  document.getElementById("dnd-image-display").style.width = "0";
 
 });
 
