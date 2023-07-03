@@ -179,6 +179,9 @@ dropArea.addEventListener('dragover', (event) => {
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   document.getElementById("dnd-image-display").style.width = "100%";
+  if (dropArea.addEventListener('dragleave', (event))) {
+    document.getElementById("dnd-image-display").style.width = "0%";
+  }
 
 });
 
