@@ -95,6 +95,10 @@ html, body {
   left: 0;
   top: 0;
   background-color: rgba(0,0,0, 0.6); /* Black w/opacity */
+  text-align: center;
+  font-size: 2vw;
+  padding-top: 45%;
+  color: azure;
 }
 
 .result-container {
@@ -187,13 +191,13 @@ dropArea.addEventListener('dragover', (event) => {
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   overlayArea.style.width = "100%";
-  //overlayArea.innerHTML = `<div class="drop-overlay-text">Drop your image file</div>`;
+  overlayArea.innerHTML = `Drop your image file`;
 });
 
 overlayArea.addEventListener('dragleave', (event) => {
   event.stopPropagation();
   event.preventDefault();
-  //overlayArea.innerHTML = "";
+  overlayArea.innerHTML = "";
   overlayArea.style.width = "0%";
 
 });
