@@ -17,7 +17,6 @@ permalink: /img/
   html, body {
     height: 100%;
     overflow: hidden;
-    background-color: #AD8F75;
     font-family: 'Trebuchet MS', sans-serif;
     margin: 0;
   
@@ -37,7 +36,7 @@ permalink: /img/
   .container-container {
       position: relative;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 10% 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
       top: 30%;
       -webkit-transform: translateY(-50%);
@@ -51,7 +50,7 @@ permalink: /img/
       margin: auto;
       width: 80%;
       height: auto;
-      grid-area: 3 / 1;
+      grid-area: 3 / 1 / / span 2;
       
   }
   
@@ -202,7 +201,6 @@ permalink: /img/
       </div>
       <div id="result" class="result-container"></div>
       </div>
-    <div class="bottom-curve-background"></div>
   </div>
   
   
