@@ -36,6 +36,9 @@ permalink: /img/
   
   .container-container {
       position: relative;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
       top: 30%;
       -webkit-transform: translateY(-50%);
       ms-transform: translateY(-50%);
@@ -91,7 +94,7 @@ permalink: /img/
   
   .dnd-image-container {
     height: 100%;
-    width: 100%;
+    width: 0;
     position: fixed; 
     z-index: 1000;
     left: 0;
@@ -142,34 +145,27 @@ permalink: /img/
   }
   
   .drop-overlay-text {
-    color: azure;
-    animation-name: addDots;
-    animation-duration: 1s;
-    font-size: ;
+    text-align: center;
+    font-size: 1vw;
+    padding-top: 45%;
+    color: #f0ffff;
   }
-
-  .drop-overlay-text::after {
-    content: ".";
-    transition: 0.5s;
-    transition-duration: 60s;
-  }
-
   
   
   .loader {
-    border: 4px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 4px solid #3498db;
-    border-style: dotted;
-    width: 20px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
+      border: 4px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      border-style: dotted;
+      width: 20px;
+      height: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
   
   /* Safari */
   @-webkit-keyframes spin {
@@ -186,8 +182,7 @@ permalink: /img/
   
   
   <div class="first-layer-div" id="drop-area">
-    <div class="dnd-image-container" id="dnd-image-display"><div class="loader"></div>
-    <div class="drop-overlay-text">removing bg.</div></div>
+    <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
       <div id="input-container">
       <div class="text-container">
@@ -196,7 +191,7 @@ permalink: /img/
           </div>
       </div>
       <div class="button-and-instructions">
-        <i class="material-icons" style="font-size:48px;color:red">cloud_upload</i>
+        <i class="material-icons" style="font-size:96px;color: cornflowerblue">cloud_upload</i>
         <div class="button-container">
           <input class="inner" style="display: none;" type="file" id="file-selector">
           <label class="inner" for="file-selector">UPLOAD IMAGE</label>
@@ -254,7 +249,7 @@ permalink: /img/
     overlayArea.style.width = "100%";
     overlayArea.innerHTML = `
     <div class="loader"></div>
-    <div class="drop-overlay-text">removing bg</div>
+    <div>removing bg..</div>
       `;
     if (file) {
         var formData = new FormData();
