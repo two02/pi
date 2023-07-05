@@ -236,7 +236,7 @@ li {
     width: 50px;
     height: 50px;
     margin: 0;
-    position: relative;
+    position: absolute;
     background-size: 50px 50px;
     background-repeat: no-repeat;
     animation-name: tankmove;
@@ -247,10 +247,14 @@ li {
 
 
 @keyframes tankmove {
-  0%   { left:0px;}
-  100% { left:100px;}
+  0%   { left:200px; bottom: 200px;}
+  100% { left:400px; bottom: 200px;}
 }
 
+.bullet {
+    
+
+}
 
 @media screen and (min-width: 1360px) and (max-width: 1521px) {
   .text-container {
@@ -284,14 +288,18 @@ li {
           <label class="inner" for="file-selector">UPLOAD IMAGE</label>
         </div>
           <p class="">or drop an image file (.jpeg, .png)</p>
-          <div class="tank-anim"></div>
       </div>
       <div id="result" class="result-container"></div>
         <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
         <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
+
       </div>
+      
   </div>
-  
+  <div class="tank-anim"></div>
+  <div class="bullet"></div>
+
+
   
   
   <script>
