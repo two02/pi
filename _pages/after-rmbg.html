@@ -41,7 +41,7 @@ permalink: /img/
       display: grid;
       height: 100%;
       grid-template-columns: 5% 1fr 1fr 0.5fr 0.5fr 1fr 1fr 5%;
-      grid-template-rows: 5% 1fr 1fr 1fr 5%;
+      grid-template-rows: 10% 1fr 1fr 1fr 5%;
       z-index: 2;
   }
   
@@ -209,6 +209,7 @@ permalink: /img/
 .nav-bar {
   grid-area: 1 / 1 / span 1 / span 8;
   background-color: #282A3A;
+  display: inline;
 }
   </style>
   
@@ -216,7 +217,7 @@ permalink: /img/
   <div class="first-layer-div" id="drop-area">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
-        <div class="nav-bar"></div>
+        <div class="nav-bar"><div>expelBg</div></div>
       <div class="text-container">
           <div class="header-container">
               <h1>Remove Background</h1>
