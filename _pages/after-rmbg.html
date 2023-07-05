@@ -179,7 +179,27 @@ permalink: /img/
     grid-area: 2 / 5 / span 2 / span 3;
     background-color: #735F32;
     border-radius: 35px;
+    display: grid;
+    grid-template-areas: image-position;
   }
+
+  #image-in-bg,
+  #image-in-front {
+    grid-area: image-position;
+  }
+
+  #image-in-bg {
+    animation-name: remove-bg;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+  }
+
+  @keyframes remove-bg {
+  from {width: 100%;}
+  to {width: 0;}
+}
   </style>
   
   
@@ -191,7 +211,11 @@ permalink: /img/
               <h1>Remove Background</h1>
           </div>
       </div>
-      <div class="front-image"></div>
+      <div class="front-image">
+        <div id="image-in-bg"><img src='/static/labrador.jpeg'></div>
+        <div id="image-in-front"><img src='static/images-removebg-preview.png'</div>
+
+      </div>
       <div class="button-and-instructions">
         <div class="button-container">
           <input class="inner" style="display: none;" type="file" id="file-selector">
