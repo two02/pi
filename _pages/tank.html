@@ -252,8 +252,20 @@ li {
 }
 
 .bullet {
-    
+    border-radius: 100%;
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    animation-name: bulletmove;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 
+}
+
+@keyframes bulletmove {
+  0%   { left:400px; bottom: 200px;}
+  100% { left:800px; bottom: 600px;}
 }
 
 @media screen and (min-width: 1360px) and (max-width: 1521px) {
