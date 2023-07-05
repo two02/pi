@@ -191,7 +191,8 @@ permalink: /img/
   #image-in-bg {
     animation-name: remove-bg;
     animation-fill-mode: forwards;
-    animation-duration: 2s;
+    animation-duration: 1s;
+    animation-delay: 2s;
     animation-timing-function: ease-in-out;
 
   }
@@ -221,8 +222,8 @@ permalink: /img/
       </div>
       <div id="result" class="result-container"></div>
       <div class="front-image">
-        <div id="image-in-bg"><img src='/static/labrador.jpeg'></div>
-        <div id="image-in-front"><img src='static/images-removebg-preview.png'</div>
+        <div id="image-in-bg"><img src='{{ "/static/labrador.jpeg" | relative_url }}'></div>
+        <div id="image-in-front"><img src='{{ "static/images-removebg-preview.png" | relative_url }}'</div>
 
       </div>
       </div>
