@@ -9,14 +9,6 @@
     --easing: cubic-bezier(.5, 0, .5, 1);
     --stagger: calc(-1 * var(--semi-duration) / 2);
   }
-
-  .dog-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
   
   .dog-div *, .dog-div *:before, .dog-div *:after {
     animation-timing-function: var(--easing) !important ;
@@ -30,7 +22,7 @@
     justify-content: center;
     align-items: center;
     
-   .dog-div * {
+    .dog-div * {
       position: absolute;
       will-change: transform;
     }
@@ -557,14 +549,19 @@
     }
   }
   
-.dog-div {
+  .dog-div {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #E3E3E3;
   }
   
-
+  .dog-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
   .dog-div *,
   .dog-div *:before,
