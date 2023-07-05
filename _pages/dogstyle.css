@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     
-    .dog-div * {
+     * {
       position: absolute;
       will-change: transform;
     }
