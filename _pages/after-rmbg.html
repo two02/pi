@@ -311,7 +311,7 @@ permalink: /img/
     overlayArea.innerHTML = `
     <div id="uploading">
       <div>
-        <div>...loading...</div>
+        <div>...uploading...</div>
         <div class="progress"><div id="progressbar"></div></div>
       </div>
     </div>
@@ -319,6 +319,7 @@ permalink: /img/
     if (file) {
         var formData = new FormData();
         formData.append("image", file);
+
   
         // Replace 'http://example.com/upload' with the URL of your backend server endpoint
         fetch("https://54.212.156.175:8080/remove-background", {
@@ -329,10 +330,7 @@ permalink: /img/
             // other headers if required
           },
           body: formData,
-        })
-        overlayArea.innerHTML = `
-    <div class="loader"></div>
-    <div>removing bg..</div>`;
+        }
         .then((response) => response.json())
           .then((data) => {
             const resultContainer = document.getElementById("result");
