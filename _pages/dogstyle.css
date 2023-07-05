@@ -18,7 +18,7 @@
     height: 100%;
   }
   
-  .dog-div > *, .dog-div > *:before, .dog-div > *:after {
+  .dog-div *, .dog-div *:before, .dog-div *:after {
     animation-timing-function: var(--easing) !important ;
   }
   
@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     
-   .dog-div > * {
+   .dog-div * {
       position: absolute;
       will-change: transform;
     }
@@ -566,9 +566,9 @@
   
 
   
-  .dog-div > *,
-  .dog-div > *:before,
-  .dog-div > *:after {
+  .dog-div *,
+  .dog-div *:before,
+  .dog-div *:after {
     box-sizing: border-box;
     position: relative;
   }
