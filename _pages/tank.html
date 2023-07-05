@@ -257,17 +257,39 @@ li {
     height: 3px;
     position: absolute;
     animation-name: bulletmove;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     background-color: #f0ffff;
     z-index: 10;
+    animation-delay: 4s;
 
 }
 
 @keyframes bulletmove {
   0%   { left:400px; bottom: 200px;}
-  100% { left:600px; bottom: 600px;}
+  99% { left:600px; bottom: 600px; }
+  100% {width: 0;}
+}
+
+.explosion {
+    position: absolute;
+    animation-name: explosion;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    background-color: #f0ffff;
+    z-index: 10;
+    animation-delay: 4s;
+    border-radius: 100%;
+    left: 400px;
+    bottom: 200px;
+}
+
+@keyframes .explosion {
+    0% { width: 3px; height: 3px;}
+    50% { width: 8px; height: 5px; }
+    100% { width: 15px; height: 15px;}
 }
 
 @media screen and (min-width: 1360px) and (max-width: 1521px) {
@@ -312,6 +334,7 @@ li {
   </div>
   <div class="tank-anim"></div>
   <div class="bullet"></div>
+  <div class="explosion"></div>
 
 
   
