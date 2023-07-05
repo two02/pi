@@ -81,12 +81,13 @@ permalink: /img/
     grid-area: inner-div;
     background-color: #282A3A;
     border-radius: 35px;
-    padding: 15px 32px;
+    padding: 20px 40px;
     text-decoration: none;
+
   }
   
   .inner:hover {
-    background-color: rgb(100, 149, 237, 0.6);
+    background-color: #735F32;
   }
   
   .dnd-image-container {
@@ -204,12 +205,18 @@ permalink: /img/
   from {width: 100%;}
   to {width: 0;}
 }
+
+.nav-bar {
+  grid-area: 1 / 1 / span 1 / span 8;
+  background-color: #282A3A;
+}
   </style>
   
   
   <div class="first-layer-div" id="drop-area">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
+        <div class="nav-bar"></div>
       <div class="text-container">
           <div class="header-container">
               <h1>Remove Background</h1>
