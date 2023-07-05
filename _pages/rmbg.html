@@ -102,6 +102,13 @@ html, body {
   font-size: 2vw;
   padding-top: 45%;
   color: azure;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.dnd-inner {
+  grid-area: 2 / 2;
 }
 
 .result-container {
@@ -222,7 +229,7 @@ dropArea.addEventListener('dragover', (event) => {
   // Style the drag-and-drop as a "copy file" operation.
   event.dataTransfer.dropEffect = 'copy';
   overlayArea.style.width = "100%";
-  overlayArea.innerHTML = `Drop your image file`;
+  overlayArea.innerHTML = `<div class="dnd-inner">Drop your image file</div>`;
 });
 
 overlayArea.addEventListener('dragleave', (event) => {
@@ -246,8 +253,8 @@ function makerequest(fileList) {
   var file = fileList[0];
   overlayArea.style.width = "100%";
   overlayArea.innerHTML = `
-  <div class="loader"></div>
-  <div>removing bg..</div>
+  <div class="dnd-inner"><div class="loader"></div>
+  <div>removing bg..</div></div>
     `;
   if (file) {
       var formData = new FormData();
