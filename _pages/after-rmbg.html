@@ -175,18 +175,18 @@ permalink: /img/
     100% { transform: rotate(360deg); }
   }
   
-  .front-image {
+  /*.front-image {
     grid-area: 2 / 5 / span 2 / span 3;
     background-color: #735F32;
     border-radius: 35px;
     display: grid;
     grid-template-areas: image-position;
     grid-column: 1fr;
-  }
+  }*/
 
   #image-in-bg,
   #image-in-front {
-    grid-area: image-position;
+    grid-area: 2 / 6 / span 2 / span 2;
   }
 
   #image-in-bg {
@@ -222,11 +222,8 @@ permalink: /img/
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
       <div id="result" class="result-container"></div>
-      <div class="front-image">
         <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
         <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
-
-      </div>
       </div>
   </div>
   
