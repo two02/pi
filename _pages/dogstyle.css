@@ -5,12 +5,11 @@
   }
   
   .citybg{
-    max-height: 75vh;
+    height: 100%;
   }
   .container{
-    height: 370px;
+    height: 100%;
     margin: 100px auto;
-    min-width: 600px;
     max-width: 1920px;
     width: 100%;
   }
