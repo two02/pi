@@ -24,6 +24,14 @@ permalink: /img/
     color: azure;
   
   }
+
+  #drop-area {
+    background-color: transparent;
+    position: fixed;
+    z-index: 100000;
+    height: 100%;
+    width: 100%;
+  }
   
   
   .first-layer-div {
@@ -310,9 +318,9 @@ li {
 
 
   </style>
+  <div id="drop-area"></div>
   
-  
-  <div class="first-layer-div" id="drop-area">
+  <div class="first-layer-div">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
         <div class="nav-bar">
@@ -370,7 +378,7 @@ li {
     `;
   });
   
-  overlayArea.addEventListener('dragleave', (event) => {
+  dropArea.addEventListener('dragleave', (event) => {
     event.stopPropagation();
     event.preventDefault();
     overlayArea.innerHTML = ``;
