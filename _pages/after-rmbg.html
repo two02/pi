@@ -149,9 +149,11 @@ permalink: /img/
 }
 
   .result-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
+    display: grid;
+  
     
   
   }
@@ -333,7 +335,7 @@ li {
   <div id="result" class="result-container"></div>
   <div class="first-layer-div" id="drag-identifier">
     <div class="dnd-image-container" id="dnd-image-display"></div>
-      <div class="container-container">
+      <div class="container-container" id="input-container">
         <div class="nav-bar">
           <ul>
             <li>expelBg</li>
