@@ -154,8 +154,7 @@ permalink: /img/
     width: 100%;
     height: 100%;
     display: grid;
-  
-    
+    z-index: 2;
   
   }
   
@@ -435,9 +434,8 @@ li {
             dropArea.style.width = "0%";
             resultContainer.style.height = "100%"
             resultContainer.innerHTML = `
+            <p>Here is your bg removed image</p>
             <div class="result-image-container">
-              <p>Here is your bg removed image</p>
-              <br>
               <img class="result-image" src="${data.url}">
               <br>
               <div style="text-align:center">
