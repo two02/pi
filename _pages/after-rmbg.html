@@ -109,16 +109,33 @@ permalink: /img/
 
 .dnd-inner {
   grid-area: 2 / 2;
+  font-size: 2em;
 }
 
 #dnd-top-left, #dnd-top-right, #dnd-bottom-left, #dnd-bottom-right {
   border-color: azure;
   margin: 10px;
 }
-#dnd-top-left { border-width: 5px 0 0 5px; }
-#dnd-top-right { border-width: 5px 5px 0 0; }
-#dnd-bottom-left { border-width: 0 0 5px 5px; }
-#dnd-bottom-right { border-width: 0 5px 5px 0;}
+
+#dnd-top-left {
+  border-width: 5px 0 0 5px;
+  grid-area: 1 / 1;
+}
+
+#dnd-top-right {
+  border-width: 5px 5px 0 0;
+  grid-area: 1 / 3;
+}
+
+#dnd-bottom-left {
+  border-width: 0 0 5px 5px;
+  grid-area: 3 / 1;
+}
+
+#dnd-bottom-right {
+  border-width: 0 5px 5px 0;
+  grid-area: 3 / 3;
+}
 
   .result-container {
     position: relative;
