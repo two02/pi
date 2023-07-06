@@ -39,12 +39,12 @@ permalink: /img/
       display: grid;
       height: 100%;
       grid-template-columns: 5% 1fr 1fr 0.5fr 0.5fr 1fr 1fr 5%;
-      grid-template-rows: 1fr 1fr 1fr 5%;
+      grid-template-rows: 64px 1fr 1fr 1fr 5%;
       z-index: 2;
   }
   
   .text-container{
-      grid-area: 3 / 5 / span 1 / span 3;
+      grid-area: 4 / 5 / span 1 / span 3;
       padding-bottom: 40px;
       margin: auto;
       font-size: 3vw;
@@ -62,7 +62,7 @@ permalink: /img/
   
   .button-and-instructions {
       padding: 20%;
-      grid-area: 2 / 2 / span 2 / span 3;
+      grid-area: 3 / 2 / span 2 / span 3;
       background-color: #C69749;
       border-radius: 35px;
       margin: auto;
@@ -158,7 +158,7 @@ permalink: /img/
     text-align: center;
     font-size: 2em;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr 5%;
+    grid-template-rows: 64px 1fr 3fr 1fr 5%;
   
   }
   
@@ -169,12 +169,12 @@ permalink: /img/
       border-style: ridge;
       text-align: center;
       background-image: url({{ "static/46643810.jpg" | relative_url }});
-      grid-area: 2 / 2;
+      grid-area: 3 / 2;
   }
 
   .result-container p {
     background-color: #000000;
-    grid-area: 1 / 2;
+    grid-area: 2 / 2;
   }
   
   .result-image {
@@ -184,7 +184,7 @@ permalink: /img/
   }
 
   #download-button {
-    grid-area: 3 / 2;
+    grid-area: 4 / 2;
   }
   
   
@@ -245,7 +245,7 @@ permalink: /img/
   #image-in-bg,
   #image-in-front,
   #layer-inbetween {
-    grid-area: 1 / 5 / span 2 / span 3;
+    grid-area: 2 / 5 / span 2 / span 3;
     background-size: cover;
     border-radius: 35px;
     min-height: 300px;
@@ -261,7 +261,7 @@ permalink: /img/
 
   #layer-inbetween {
     animation-name: remove-bg;
-    grid-area: 1 / 5 / span 2 / span 3;
+    grid-area: 2 / 5 / span 2 / span 3;
     z-index: 4;
     animation-fill-mode: forwards;
     animation-duration: 1s;
@@ -278,6 +278,11 @@ permalink: /img/
   to {width: 100%;}
 }
 
+.nav-bar {
+  grid-area: 1 / 1 / span 1 / span 8;
+  background-color: #282A3A;
+  display: inline;
+}
 
 ul {
   list-style-type: none;
@@ -285,8 +290,6 @@ ul {
   padding: 10px;
   overflow: hidden;
   background-color: #282A3A;
-  display: inline;
-
 }
 
 
@@ -311,22 +314,22 @@ li {
   }
   .container-container {
     grid-template-columns: 5% 1fr  1fr 1fr 1fr 1fr 1fr 5%;
-    grid-template-rows: 1fr 5% 1fr 5%;
+    grid-template-rows: 64px 1fr 5% 1fr 5%;
   }
   .button-and-instructions {
-    grid-area: 3 / 3 / span 1 / span 4;
+    grid-area: 4 / 3 / span 1 / span 4;
     margin: auto;
     padding: auto;
   }
   .text-container {
-    grid-area: 1 / 5 / span 1 / span 3;
+    grid-area: 2 / 5 / span 1 / span 3;
     padding-bottom: 0;
     padding-top: 20px;
   }
   #image-in-bg,
   #image-in-front,
   #layer-inbetween {
-    grid-area: 1 / 2 / span 1 / span 3;
+    grid-area: 2 / 2 / span 1 / span 3;
   }
 }
 
@@ -345,6 +348,9 @@ li {
   <div class="first-layer-div" id="drag-identifier">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container" id="input-container">
+        <!--div class="nav-bar">
+          
+        </div-->
       <div class="text-container">
               <h1>Expel Background</h1>
               <p>free and unlimited!!</p>
