@@ -157,36 +157,34 @@ permalink: /img/
     z-index: 2;
     text-align: center;
     font-size: 2em;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 64px 1fr 3fr 1fr 5%;
   
   }
   
   .result-image-container {
-      width: 50%;
-      height: auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      border-radius: 20px;
+      height: 100%;
+      width: 100%;
       border-color: #C69749;
       border-style: ridge;
-      margin-top: 10%;
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-bottom: auto;
       text-align: center;
       background-image: url({{ "static/46643810.jpg" | relative_url }});
-      min-width: 80%;
-      min-height: 80%;
+      grid-area: 3 / 2;
   }
 
-  .result-image-container p {
+  .result-container p {
     background-color: #000000;
-    margin-top: 0;
+    grid-area: 2 / 2;
   }
   
   .result-image {
       max-width: 300px;
       max-height: 450px;
       width: 80%;
+  }
+
+  #download-button {
+    grid-area: 4 / 2;
   }
   
   
@@ -446,10 +444,9 @@ li {
             <div class="result-image-container">
               <p>Here is your bg removed image</p>
               <img class="result-image" src="${data.url}">
-              <br>
-              <div style="text-align:center">
-                <a href="${data.url}" target="_blank" class="inner" download>DOWNLOAD</a>
-              </div>
+            </div>
+            <div id="download-button">
+              <a href="${data.url}" target="_blank" class="inner" download>DOWNLOAD</a>
             </div>
             `; // Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
             const inputContainer = document.getElementById("input-container")
