@@ -215,7 +215,7 @@ permalink: /img/
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   overflow: hidden;
 }
 
@@ -233,10 +233,27 @@ li {
 }
 
 
-@media screen and (min-width: 1360px) and (max-width: 1521px) {
+@media screen and (min-width: 1200px) and (max-width: 1521px) {
   .text-container {
     border-right: 5px solid azure ;
     border-bottom: 5px solid azure;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-container {
+    grid-template-columns: 5% 1fr  0.5fr 0.5fr 1fr 5%;
+    grid-template-rows: 64px 1fr 5% 1fr 5%;
+  }
+  .button-and-instructions {
+    grid-area: 4 / 3 / span 1 / span 2;
+  }
+  .text-container {
+    grid-area: 2 / 4 / span 1 / span 2;
+  }
+  #image-in-bg,
+  #image-in-front {
+    grid-area: 2 / 2 / span 1 / span 2;
   }
 }
 
