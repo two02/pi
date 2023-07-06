@@ -191,7 +191,6 @@ html, body {
 
 </style>
 
-<canvas id="canvas"></canvas>
 
 <div class="first-layer-div" id="drop-area">
   <div class="dnd-image-container" id="dnd-image-display"></div>
@@ -213,7 +212,8 @@ html, body {
     </div>
     <div id="result" class="result-container"></div>
     </div>
-  <div class="bottom-curve-background"></div>
+  <div class="bottom-curve-background"><canvas id="canvas"></canvas>
+  </div>
 </div>
 
 <script src="{{ '/_pages/cloth.js' | relative_url }}"></script>
