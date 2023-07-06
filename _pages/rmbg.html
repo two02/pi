@@ -182,8 +182,15 @@ html, body {
   100% { transform: rotate(360deg); }
 }
 
+#canvas {
+  display: block;
+}
+
+
+
 </style>
 
+<canvas id="canvas"></canvas>
 
 <div class="first-layer-div" id="drop-area">
   <div class="dnd-image-container" id="dnd-image-display"></div>
@@ -208,7 +215,7 @@ html, body {
   <div class="bottom-curve-background"></div>
 </div>
 
-
+<script src="pi/_pages/cloth.js"></script>
 
 <script>
 const dropArea = document.getElementById('drop-area');
