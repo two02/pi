@@ -24,16 +24,7 @@ permalink: /img/
     color: azure;
   
   }
-
-  #drop-area {
-    background-color: transparent;
-    position: fixed;
-    z-index: 100000;
-    height: 100%;
-    width: 100%;
-  }
-  
-  
+    
   .first-layer-div {
       text-align:center;
       width: 100%;
@@ -330,10 +321,8 @@ li {
 }
 
 
-  </style>
-  <div id="drop-area"></div>
-  
-  <div class="first-layer-div">
+  </style>  
+  <div class="first-layer-div" id="drag-identifier">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
         <div class="nav-bar">
@@ -365,9 +354,9 @@ li {
   
   
   <script>
-  const dropArea = document.getElementById('drop-area');
+  const dragIdentifier = document.getElementById('drag-identifier');
   const fileSelector = document.getElementById('file-selector');
-  const overlayArea = document.getElementById('dnd-image-display');
+  const dropArea = document.getElementById('dnd-image-display');
   
     fileSelector.addEventListener('change', (event) => {
       const fileList = event.target.files;
@@ -376,14 +365,14 @@ li {
   
   
   
-  dropArea.addEventListener('dragover', (event) => {
+  dragIdentifier.addEventListener('dragover', (event) => {
     event.stopPropagation(); //stop the browser's default behavior and allow the code to run instead.
     event.preventDefault();
     // Style the drag-and-drop as a "copy file" operation.
     event.dataTransfer.dropEffect = 'copy';
-    overlayArea.style.width = "100%";
-    overlayArea.innerHTML = `
-    <div class="dnd-inner">Drop your image file</div>
+    dropArea.style.width = "100%";
+    dropArea.innerHTML = `
+    <div class="dnd-inner">Drop Your Image File</div>
     <div id="dnd-top-left"></div>
     <div id="dnd-top-right"></div>
     <div id="dnd-bottom-left"></div>
@@ -394,8 +383,8 @@ li {
   dropArea.addEventListener('dragleave', (event) => {
     event.stopPropagation();
     event.preventDefault();
-    overlayArea.innerHTML = ``;
-    overlayArea.style.width = "0%";
+    dropArea.innerHTML = ``;
+    dropArea.style.width = "0%";
   
   });
   
@@ -410,10 +399,10 @@ li {
   
   function makerequest(fileList) {
     var file = fileList[0];
-    overlayArea.style.width = "100%";
-    overlayArea.innerHTML = `
+    dropArea.style.width = "100%";
+    dropArea.innerHTML = `
     <div class="dnd-inner"><div class="loader"></div>
-  <div>removing bg..</div></div>
+  <div>expelling Bg..</div></div>
       `;
     if (file) {
         var formData = new FormData();
@@ -432,8 +421,8 @@ li {
         .then((response) => response.json())
           .then((data) => {
             const resultContainer = document.getElementById("result");
-            overlayArea.innerHTML = ``;
-            overlayArea.style.width = "0%";
+            dropArea.innerHTML = ``;
+            dropArea.style.width = "0%";
             resultContainer.innerHTML = `
             <div class="result-image-container">
               <p>Here is your bg removed image</p>
