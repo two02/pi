@@ -102,7 +102,14 @@ permalink: /img/
     font-size: 2vw;
     padding-top: 45%;
     color: azure;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
+
+.dnd-inner {
+  grid-area: 2 / 2;
+}
   
   .result-container {
     position: relative;
@@ -131,7 +138,7 @@ permalink: /img/
   }
   
   
-  .bottom-curve-background {
+  /*.bottom-curve-background {
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
       background-color: #F1F2F3;
@@ -140,14 +147,14 @@ permalink: /img/
       position: fixed;
       bottom: 0;
       z-index: 1;
-  }
+  }*/
   
-  .drop-overlay-text {
+  /*.drop-overlay-text {
     text-align: center;
     font-size: 1vw;
     padding-top: 45%;
     color: #f0ffff;
-  }
+  }*/
   
   
   .loader {
@@ -323,7 +330,7 @@ li {
     // Style the drag-and-drop as a "copy file" operation.
     event.dataTransfer.dropEffect = 'copy';
     overlayArea.style.width = "100%";
-    overlayArea.innerHTML = `Drop your image file`;
+    overlayArea.innerHTML = `<div class="dnd-inner">Drop your image file</div>`;
   });
   
   overlayArea.addEventListener('dragleave', (event) => {
@@ -347,8 +354,8 @@ li {
     var file = fileList[0];
     overlayArea.style.width = "100%";
     overlayArea.innerHTML = `
-    <div class="loader"></div>
-    <div>removing bg..</div>
+    <div class="dnd-inner"><div class="loader"></div>
+  <div>removing bg..</div></div>
       `;
     if (file) {
         var formData = new FormData();
