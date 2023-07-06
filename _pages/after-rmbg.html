@@ -20,7 +20,7 @@ permalink: /img/
     overflow: hidden;
     font-family: 'Trebuchet MS', sans-serif;
     margin: 0;
-    border-color: black;
+    background-color: black;
     color: azure;
   
   }
@@ -31,7 +31,6 @@ permalink: /img/
       height: 100%;
       position: relative;
       align-items: center;
-      background-color: black;
       z-index: 0;
       color: white;
   }
@@ -320,6 +319,12 @@ li {
   }
 }
 
+@media screen and (min-width: 600px) {
+  #upload-button::after {
+    content: 'IMAGE';
+  }
+}
+
 
   </style>  
   <div class="first-layer-div" id="drag-identifier">
@@ -340,7 +345,7 @@ li {
       <div class="button-and-instructions">
         <div class="button-container">
           <input class="inner" style="display: none;" type="file" id="file-selector">
-          <label class="inner" for="file-selector">UPLOAD IMAGE</label>
+          <label class="inner" for="file-selector" id="upload-button">UPLOAD</label>
         </div>
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
