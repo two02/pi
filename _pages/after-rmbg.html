@@ -193,17 +193,28 @@ permalink: /img/
   }
 
   #image-in-bg {
+    z-index: 3;
+  }
+
+  #image-in-front {
+    z-index: 4;
+  }
+
+  #layer-inbetween {
     animation-name: remove-bg;
+    z-index: 3.5;
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-delay: 2s;
     animation-timing-function: ease-in-out;
+    background-color: black;
+    height: 100%;
 
   }
 
   @keyframes remove-bg {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {width: 100%;}
+  to {width: 0;}
 }
 
 .nav-bar {
@@ -285,6 +296,7 @@ li {
       </div>
       <div id="result" class="result-container"></div>
         <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
+        <div id="layer-inbetween"></div>
         <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
       </div>
   </div>
