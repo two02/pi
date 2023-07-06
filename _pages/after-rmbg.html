@@ -149,7 +149,9 @@ permalink: /img/
 }
 
   .result-container {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 0%;
   
   }
   
@@ -159,7 +161,7 @@ permalink: /img/
       padding-top: 20px;
       padding-bottom: 20px;
       border-radius: 20px;
-      border-color: cornflowerblue;
+      border-color: #C69749;
       border-style: ridge;
       margin-top: 10%;
       margin-left: 25%;
@@ -328,6 +330,7 @@ li {
 
   </style>  
   <div class="first-layer-div" id="drag-identifier">
+    <div id="result" class="result-container"></div>
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container">
         <div class="nav-bar">
@@ -347,7 +350,6 @@ li {
         </div>
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
-      <div id="result" class="result-container"></div>
         <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
         <div id="layer-inbetween"></div>
         <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
