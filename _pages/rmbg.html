@@ -184,6 +184,7 @@ html, body {
 
 #canvas {
   display: block;
+  z-index: 100000;
 }
 
 
@@ -215,7 +216,7 @@ html, body {
   <div class="bottom-curve-background"></div>
 </div>
 
-<script src="pi/_pages/cloth.js"></script>
+<script src="{{ '/_pages/cloth.js' | relative_url }}"></script>
 
 <script>
 const dropArea = document.getElementById('drop-area');
