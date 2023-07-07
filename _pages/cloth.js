@@ -10,15 +10,17 @@ window.requestAnimFrame =
 
 let accuracy = 5
 let gravity = 600
-let clothY = 200
-let clothX = 400
-let spacing = 1
+let clothY = 50
+let clothX = 100
+let spacing = 8
 let tearDist = 60
 let friction = 0.99
 let bounce = 0
 
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
+ctx.lineWidth = 10
+
 
 canvas.width = window.innerWidth//Math.min(1200, window.innerWidth)
 canvas.height = window.innerHeight
