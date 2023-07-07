@@ -248,6 +248,8 @@ permalink: /img/
     background-repeat: no-repeat;
     height: auto;
     padding-left: 40px;
+    position: relative;
+    
     /*min-height: 300px;*/
   }
 
@@ -323,15 +325,17 @@ li {
     grid-area: 2 / 5 / span 1 / span 3;
     padding-bottom: 0;
     padding-top: 20px;
+    margin-left: -40;
+    z-index: 7;
   }
   #image-in-bg,
   #image-in-front,
   #layer-inbetween {
     grid-area: 2 / 2 / span 1 / span 3;
     width: 200px;
-    height: 200px;
+    height: 100px;
     padding-left: 0;
-    padding-top: 40px;
+    margin-top: 40px;
   }
 }
 
