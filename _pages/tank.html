@@ -130,7 +130,7 @@ permalink: /tank/
   }
   
   
-  .bottom-curve-background {
+  /*.bottom-curve-background {
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
       background-color: #F1F2F3;
@@ -139,7 +139,7 @@ permalink: /tank/
       position: fixed;
       bottom: 0;
       z-index: 1;
-  }
+  }*/
   
   .drop-overlay-text {
     text-align: center;
@@ -304,6 +304,15 @@ li {
   }
 }
 
+#canvas {
+  display: block;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  grid-area: 1 / 6 /;
+  background-color: #f0ffff;
+}
 
   </style>
   
@@ -331,8 +340,9 @@ li {
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
       <div id="result" class="result-container"></div>
-        <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
-        <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
+      <canvas id="canvas"></canvas>
+        <!--div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
+        <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div-->
 
       </div>
       
