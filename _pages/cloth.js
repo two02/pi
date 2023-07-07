@@ -9,7 +9,7 @@ window.requestAnimFrame =
   }
 
 let accuracy = 5
-let gravity = 1200
+let gravity = 2000
 let clothY = 75
 let clothX = 150
 let spacing = 8
