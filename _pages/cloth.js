@@ -19,7 +19,6 @@ let bounce = 0
 
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
-ctx.lineWidth = 10
 
 
 canvas.width = window.innerWidth//Math.min(1200, window.innerWidth)
@@ -166,6 +165,7 @@ class Constraint {
   }
 
   draw () {
+    ctx.lineWidth = 10
     ctx.moveTo(this.p1.x, this.p1.y)
     ctx.lineTo(this.p2.x, this.p2.y)
   }
