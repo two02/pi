@@ -23,7 +23,7 @@ let ctx = canvas.getContext('2d')
 canvas.width = Math.min(300, window.innerWidth)
 canvas.height = 400
 
-ctx.strokeStyle = '#000'
+ctx.strokeStyle = '#fff'
 
 let mouse = {
   cut: 8,
