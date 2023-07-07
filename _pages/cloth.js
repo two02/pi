@@ -10,8 +10,8 @@ window.requestAnimFrame =
 
 let accuracy = 5
 let gravity = 400
-let clothY = 28
-let clothX = 54
+let clothY = 24
+let clothX = 50
 let spacing = 8
 let tearDist = 60
 let friction = 0.99
@@ -20,14 +20,14 @@ let bounce = 0.5
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+canvas.width = Math.min(700, window.innerWidth)
+canvas.height = 400
 
 ctx.strokeStyle = '#555'
 
 let mouse = {
   cut: 8,
-  influence: 26,
+  influence: 36,
   down: false,
   button: 1,
   x: 0,
@@ -170,7 +170,7 @@ class Constraint {
 }
 
 class Cloth {
-  constructor () {
+  constructor (free) {
     this.points = []
 
     let startX = canvas.width / 2 - clothX * spacing / 2
@@ -178,7 +178,7 @@ class Cloth {
     for (let y = 0; y <= clothY; y++) {
       for (let x = 0; x <= clothX; x++) {
         let point = new Point(startX + x * spacing, 20 + y * spacing)
-        y === 0 && point.pin(point.x, point.y)
+        !free && y === 0 && point.pin(point.x, point.y)
         x !== 0 && point.attach(this.points[this.points.length - 1])
         y !== 0 && point.attach(this.points[x + (y - 1) * (clothX + 1)])
 
@@ -225,6 +225,11 @@ canvas.onmouseup = () => (mouse.down = false)
 canvas.oncontextmenu = (e) => e.preventDefault()
 
 let cloth = new Cloth()
+
+function zeroG() {
+  gravity = 0
+  cloth = new Cloth(true)
+}
 
 ;(function update (time) {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
