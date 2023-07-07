@@ -341,18 +341,9 @@ li {
   }
 }
 
-#canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -20px;
-  z-index: 4;
-
-}
 
   </style>  
+  <canvas id="canvas"></canvas>
   <div id="result" class="result-container"></div>
   <div class="first-layer-div" id="drag-identifier">
     <div class="dnd-image-container" id="dnd-image-display"></div>
@@ -374,10 +365,7 @@ li {
         </div>
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
-        <div id="image-in-bg" style='background-image: url({{ "/static/labrador.jpeg" | relative_url }});'></div>
-        <div id="layer-inbetween"></div>
-        <div id="image-in-front" style='background-image: url({{ "static/images-removebg-preview.png" | relative_url }});'</div>
-      </div>
+        </div>
   </div>
   
   
