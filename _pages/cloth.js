@@ -9,11 +9,11 @@ window.requestAnimFrame =
   }
 
 let accuracy = 5
-let gravity = 600
-let clothY = 50
+let gravity = 1000
+let clothY = 75
 let clothX = 100
 let spacing = 8
-let tearDist = 10
+let tearDist = 60
 let friction = 0.99
 let bounce = 0
 
