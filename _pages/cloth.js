@@ -20,8 +20,8 @@ let bounce = 0
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
 
-canvas.width = Math.min(1200, window.innerWidth)
-canvas.height = 800
+canvas.width = Math.min(300, window.innerWidth)
+canvas.height = 400
 
 ctx.strokeStyle = '#000'
 
