@@ -13,7 +13,7 @@ let gravity = 600
 let clothY = 50
 let clothX = 100
 let spacing = 8
-let tearDist = 60
+let tearDist = 10
 let friction = 0.99
 let bounce = 0
 
