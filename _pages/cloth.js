@@ -10,9 +10,9 @@ window.requestAnimFrame =
 
 let accuracy = 5
 let gravity = 400
-let clothY = 100
-let clothX = 500
-let spacing = 8
+let clothY = 400
+let clothX = 1000
+let spacing = 1
 let tearDist = 60
 let friction = 0.99
 let bounce = 0.5
@@ -23,7 +23,7 @@ let ctx = canvas.getContext('2d')
 canvas.width = Math.min(1200, window.innerWidth)
 canvas.height = 800
 
-ctx.strokeStyle = '#555'
+ctx.strokeStyle = '#000'
 
 let mouse = {
   cut: 8,
