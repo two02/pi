@@ -348,13 +348,12 @@ li {
   position: absolute;
   top: 0;
   left: -20px;
-  z-index: 4;
+  z-index: 20;
 
 }
   </style>  
   <canvas id="canvas"></canvas>
   <div id="result" class="result-container"></div>
-  <div class="first-layer-div" id="drag-identifier">
     <div class="dnd-image-container" id="dnd-image-display"></div>
       <div class="container-container" id="input-container">
         <div class="nav-bar">
@@ -375,13 +374,12 @@ li {
           <p class="">or drop an image file (.jpeg, .png)</p>
       </div>
         </div>
-  </div>
   
   <script src="{{ '/_pages/cloth.js' | relative_url }}"></script>
 
   
   <script>
-  const dragIdentifier = document.getElementById('drag-identifier');
+  const dragIdentifier = document.getElementById('canvas');
   const fileSelector = document.getElementById('file-selector');
   const dropArea = document.getElementById('dnd-image-display');
   
