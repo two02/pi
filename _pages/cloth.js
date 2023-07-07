@@ -9,13 +9,13 @@ window.requestAnimFrame =
   }
 
 let accuracy = 5
-let gravity = 400
-let clothY = 400
-let clothX = 1000
-let spacing = 1
+let gravity = 1000
+let clothY = 100
+let clothX = 400
+let spacing = 2
 let tearDist = 60
 let friction = 0.99
-let bounce = 0.5
+let bounce = 0
 
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
