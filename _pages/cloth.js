@@ -9,10 +9,10 @@ window.requestAnimFrame =
   }
 
 let accuracy = 5
-let gravity = 1000
+let gravity = 600
 let clothY = 100
-let clothX = 400
-let spacing = 0.5
+let clothX = 800
+let spacing = 1
 let tearDist = 60
 let friction = 0.99
 let bounce = 0
@@ -20,7 +20,7 @@ let bounce = 0
 let canvas = document.getElementById('canvas')
 let ctx = canvas.getContext('2d')
 
-canvas.width = Math.min(300, window.innerWidth)
+canvas.width = Math.min(600, window.innerWidth)
 canvas.height = 400
 
 ctx.strokeStyle = '#fff'
