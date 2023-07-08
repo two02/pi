@@ -1,5 +1,5 @@
 // Create the canvas element
-var canvas = document.createElement("canvas");
+let canvas = document.getElementById('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
