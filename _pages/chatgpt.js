@@ -8,8 +8,7 @@ window.requestAnimFrame =
     window.setTimeout(callback, 1e3 / 60)
   }
 
-let image = new Image();
-image.src = 'https://tharakauj.github.io/pi/static/tank.png'; // Replace with the path to your image
+const image = document.getElementById("image");
   
 
 let accuracy = 5
