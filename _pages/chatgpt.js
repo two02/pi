@@ -9,7 +9,7 @@ window.requestAnimFrame =
   }
 
 let image = new Image();
-image.src = 'static/tank.png'; // Replace with the path to your image
+image.src = '/static/tank.png'; // Replace with the path to your image
   
 
 let accuracy = 5
