@@ -1,43 +1,252 @@
-// Create the canvas element
-let canvas = document.getElementById('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.appendChild(canvas);
+window.requestAnimFrame =
+  window.requestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame ||
+  function (callback) {
+    window.setTimeout(callback, 1e3 / 60)
+  }
 
-// Get the 2D rendering context
-var ctx = canvas.getContext("2d");
-
-// Variables to track the tearing effect
-var isTearing = false;
-var lastX, lastY;
-
-// Function to handle mouse events
-function handleMouse(event) {
-  var x = event.clientX;
-  var y = event.clientY;
+let image = new Image();
+image.src = 'static/tank.png'; // Replace with the path to your image
   
-  if (event.type === "mousedown") {
-    isTearing = true;
-    lastX = x;
-    lastY = y;
-  } else if (event.type === "mouseup") {
-    isTearing = false;
-  } else if (event.type === "mousemove") {
-    if (isTearing) {
-      ctx.clearRect(x, y, 10, 10); // Clear a small area around the mouse
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(lastX, lastY);
-      ctx.lineWidth = 5;
-      ctx.strokeStyle = "white";
-      ctx.stroke();
-      lastX = x;
-      lastY = y;
+
+let accuracy = 5
+let gravity = 2000
+let clothY = 75
+let clothX = 150
+let spacing = 8
+let tearDist = 60
+let friction = 0.99
+let bounce = 0
+
+let canvas = document.getElementById('canvas')
+let ctx = canvas.getContext('2d')
+
+
+canvas.width = window.innerWidth//Math.min(1200, window.innerWidth)
+canvas.height = window.innerHeight
+
+ctx.strokeStyle = '#fff'
+
+let mouse = {
+  cut: 8,
+  influence: 36,
+  down: false,
+  button: 1,
+  x: 0,
+  y: 0,
+  px: 0,
+  py: 0
+}
+
+class Point {
+  constructor (x, y) {
+    this.x = x
+    this.y = y
+    this.px = x
+    this.py = y
+    this.vx = 0
+    this.vy = 0
+    this.pinX = null
+    this.pinY = null
+
+    this.constraints = []
+  }
+
+  update (delta) {
+    if (this.pinX && this.pinY) return this
+
+    if (mouse.down) {
+      let dx = this.x - mouse.x
+      let dy = this.y - mouse.y
+      let dist = Math.sqrt(dx * dx + dy * dy)
+
+      if (mouse.button === 1 && dist < mouse.influence) {
+        this.px = this.x - (mouse.x - mouse.px)
+        this.py = this.y - (mouse.y - mouse.py)
+      } else if (dist < mouse.cut) {
+        this.constraints = []
+      }
     }
+
+    this.addForce(0, gravity)
+
+    let nx = this.x + (this.x - this.px) * friction + this.vx * delta
+    let ny = this.y + (this.y - this.py) * friction + this.vy * delta
+
+    this.px = this.x
+    this.py = this.y
+
+    this.x = nx
+    this.y = ny
+
+    this.vy = this.vx = 0
+
+    if (this.x >= canvas.width) {
+      this.px = canvas.width + (canvas.width - this.px) * bounce
+      this.x = canvas.width
+    } else if (this.x <= 0) {
+      this.px *= -1 * bounce
+      this.x = 0
+    }
+
+    if (this.y >= canvas.height) {
+      this.py = canvas.height + (canvas.height - this.py) * bounce
+      this.y = canvas.height
+    } else if (this.y <= 0) {
+      this.py *= -1 * bounce
+      this.y = 0
+    }
+
+    // Move the image pixels along with the points
+    ctx.save();
+    ctx.globalCompositeOperation = 'source-atop';
+    ctx.drawImage(image, this.x - image.width / 2, this.y - image.height / 2);
+    ctx.restore();
+
+    return this
+  }
+
+  draw () {
+    let i = this.constraints.length
+    while (i--) this.constraints[i].draw()
+  }
+
+  resolve () {
+    if (this.pinX && this.pinY) {
+      this.x = this.pinX
+      this.y = this.pinY
+      return
+    }
+
+    this.constraints.forEach((constraint) => constraint.resolve())
+  }
+
+  attach (point) {
+    this.constraints.push(new Constraint(this, point))
+  }
+
+  free (constraint) {
+    this.constraints.splice(this.constraints.indexOf(constraint), 1)
+  }
+
+  addForce (x, y) {
+    this.vx += x
+    this.vy += y
+  }
+
+  pin (pinx, piny) {
+    this.pinX = pinx
+    this.pinY = piny
   }
 }
 
-// Attach event listeners
-canvas.addEventListener("mousedown", handleMouse);
-canvas.addEventListener("mouseup", handleMouse);
-canvas.addEventListener("mousemove", handleMouse);
+class Constraint {
+  constructor (p1, p2) {
+    this.p1 = p1
+    this.p2 = p2
+    this.length = spacing
+  }
+
+  resolve () {
+    let dx = this.p1.x - this.p2.x
+    let dy = this.p1.y - this.p2.y
+    let dist = Math.sqrt(dx * dx + dy * dy)
+
+    if (dist < this.length) return
+
+    let diff = (this.length - dist) / dist
+
+    if (dist > tearDist) this.p1.free(this)
+
+    let mul = diff * 0.5 * (1 - this.length / dist)
+
+    let px = dx * mul
+    let py = dy * mul
+
+    !this.p1.pinX && (this.p1.x += px)
+    !this.p1.pinY && (this.p1.y += py)
+    !this.p2.pinX && (this.p2.x -= px)
+    !this.p2.pinY && (this.p2.y -= py)
+
+    return this
+  }
+
+  draw () {
+    ctx.lineWidth = 10
+    ctx.moveTo(this.p1.x, this.p1.y)
+    ctx.lineTo(this.p2.x, this.p2.y)
+  }
+}
+
+class Cloth {
+  constructor (free) {
+    this.points = []
+
+    let startX = canvas.width / 2 - clothX * spacing / 2
+
+    for (let y = 0; y <= clothY; y++) {
+      for (let x = 0; x <= clothX; x++) {
+        let point = new Point(startX + x * spacing, 20 + y * spacing)
+        !free && y === 0 && point.pin(point.x, point.y)
+        x !== 0 && point.attach(this.points[this.points.length - 1])
+        y !== 0 && point.attach(this.points[x + (y - 1) * (clothX + 1)])
+
+        this.points.push(point)
+      }
+    }
+  }
+
+  update (delta) {
+    let i = accuracy
+
+    while (i--) {
+      this.points.forEach((point) => {
+        point.resolve()
+      })
+    }
+
+    ctx.beginPath()
+    this.points.forEach((point) => {
+      point.update(delta * delta).draw()
+    })
+    ctx.stroke()
+  }
+}
+
+function setMouse (e) {
+  let rect = canvas.getBoundingClientRect()
+  mouse.px = mouse.x
+  mouse.py = mouse.y
+  mouse.x = e.clientX - rect.left
+  mouse.y = e.clientY - rect.top
+}
+
+canvas.onmousedown = (e) => {
+  mouse.button = e.which
+  mouse.down = true
+  setMouse(e)
+}
+
+canvas.onmousemove = setMouse
+
+canvas.onmouseup = () => (mouse.down = false)
+
+canvas.oncontextmenu = (e) => e.preventDefault()
+
+let cloth = new Cloth()
+
+function zeroG() {
+  gravity = 0
+  cloth = new Cloth(true)
+}
+
+;(function update (time) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+  cloth.update(0.016)
+
+  window.requestAnimFrame(update)
+})(0)
