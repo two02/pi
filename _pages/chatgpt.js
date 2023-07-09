@@ -8,7 +8,7 @@ window.requestAnimFrame =
     window.setTimeout(callback, 1e3 / 60)
   }
 
-const image = document.getElementById("image");
+//const image = document.getElementById("image");
   
 
 let accuracy = 5
@@ -100,10 +100,10 @@ class Point {
     }
 
     // Move the image pixels along with the points
-    ctx.save();
-    ctx.globalCompositeOperation = 'source-atop';
-    ctx.drawImage(image, this.x - image.width / 2, this.y - image.height / 2);
-    ctx.restore();
+    //ctx.save();
+    //ctx.globalCompositeOperation = 'source-atop';
+    //ctx.drawImage(image, this.x - image.width / 2, this.y - image.height / 2);
+    //ctx.restore();
 
     return this
   }
