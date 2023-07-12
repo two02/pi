@@ -14,7 +14,7 @@ header:
     {% if post.header.overlay_image %}
       {% assign image = post.header.overlay_image %}
     {% else %}
-      {% assign image = site.teaser %}
+      {% capture image %}{{ site.teaser }}{% endcapture %}
     {% endif %}
 
     <div class="myblog-card" onclick="location.href='{{ post.url | relative_url }}'">
