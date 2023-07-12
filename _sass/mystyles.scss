@@ -17,50 +17,11 @@
     clear: both;
   }
   
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 900px) {
-    .mycolumn  {
-      width: 40%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .mycolumn  {
-      width: 100%;
-    }
-  }
   
 /* when hover grow */  
   .mycolumn:hover { 
   transform: scale(1.1); 
   }
-
-  /* Responsive layout - makes all the columns with same hight in big screens */
-  @media screen and (min-width: 900px) {
-    .myrow  {
-      display: flex;}
-    .mytworow {
-      flex: 1;
-      display: flex;
-    }
-    .mycolumn{
-      flex: 1;
-    }
-  }
-
-/* Responsive layout - makes two columns two rows with same hight in medium screens */
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .myrow  {
-    display: table;}
-  .mytworow {
-    display: flex;
-  }
-  .mycolumn{
-    flex: 1;
-  }
-}  
-
 
 
 .mygrid-container {
@@ -83,6 +44,90 @@
   overflow: hidden;
 
 }
+
+.myblog-grid-container {
+  display: grid;
+  padding: 10px;
+  gap: 10px 10px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.myblog-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 1em;
+  text-align: center;
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 20% 1fr ;
+  
+
+  .myarchive__item-teaser {
+    grid-column: 1 ;
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    grid-column: 2;
+  }
+
+  p {
+    grid-column: 2;
+  }
+}
+
+
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .mycolumn  {
+    width: 40%;
+  }
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .mycolumn  {
+    width: 100%;
+  }
+}
+
+
+/* Responsive layout - makes all the columns with same hight in big screens */
+@media screen and (min-width: 900px) {
+  .myrow  {
+    display: flex;}
+  .mytworow {
+    flex: 1;
+    display: flex;
+  }
+  .mycolumn{
+    flex: 1;
+  }
+}
+
+/* Responsive layout - makes two columns two rows with same hight in medium screens */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+.myrow  {
+  display: table;}
+.mytworow {
+  display: flex;
+}
+.mycolumn{
+  flex: 1;
+}
+}  
+
 
 /* Responsive layout - makes two columns with same hight in medium screens */
 @media screen and (min-width: 600px) and (max-width: 900px) {
