@@ -87,12 +87,11 @@
 
 
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .mycolumn  {
-    width: 40%;
-  }
-}
+
+/*=============================================================================================================================================================
+media Query
+
+==============================================================================================================================================================*/
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -100,6 +99,23 @@
   .mycolumn  {
     width: 100%;
   }
+  .mygrid-container {
+    grid-template-columns: 1fr;
+  }
+  .myblog-card {
+    grid-template-columns: 1fr;
+
+    .myarchive__item-teaser {
+      grid-area: 1 / 1 ;
+    }
+    h1 {
+      grid-area: 2 / 1;
+    }
+    p {
+      grid-area: 3 / 1;
+    }
+  }
+  
 }
 
 
@@ -125,21 +141,10 @@
 }
 .mycolumn{
   flex: 1;
+  width: 40%;
+}
+.mygrid-container {
+  grid-template-columns: 1fr 1fr;
 }
 }  
 
-
-/* Responsive layout - makes two columns with same hight in medium screens */
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .mygrid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  }
-
-
-/* Responsive layout - makes one columns with same hight in medium screens */
-@media screen and (max-width: 600px) {
-  .mygrid-container {
-    grid-template-columns: 1fr;
-
-  }}
