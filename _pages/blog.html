@@ -15,6 +15,7 @@ header:
       {% assign image = post.header.overlay_image %}
     {% else %}
       {% assign image = post.header.teaser %}
+    {% endif %}
 
     <div class="myblog-card" onclick="location.href='{{ post.url | relative_url }}'">
       <div class="myarchive__item-teaser"><img src='{{ image | relative_url }}'></div>
