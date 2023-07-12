@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: myarchive
 classes: wide
 
 ---
@@ -16,11 +16,9 @@ classes: wide
    
         
         <div class="mycard" onclick="location.href='{{ post.url | relative_url }}'">
-            <div>
-              <div class="archive__item-teaser"><img src='{{ post.header.overlay_image | relative_url }}'></div>
-              <h1 class=".archive__item-title">{{ post.title | escape }}</h1>
-            <p style="font-size: 80%;" class="archive__item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
-            </div>
+              <div class="myarchive__item-teaser"><img src='{{ post.header.overlay_image | relative_url }}'></div>
+              <h1 class=".myarchive__item-title">{{ post.title | escape }}</h1>
+            <p style="font-size: 80%;" class="myarchive__item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
         </div>
         
     
