@@ -11,8 +11,13 @@ header:
 <div class="myblog-grid-container">
     {% for post in site.tags['blog'] %}
 
+    {% if post.header.overlay_image %}
+      {% assign image = post.header.overlay_image %}
+    {% else %}
+      {% assign image = post.header.teaser %}
+
     <div class="myblog-card" onclick="location.href='{{ post.url | relative_url }}'">
-      <div class="myarchive__item-teaser"><img src='{{ post.header.overlay_image | relative_url }}'></div>
+      <div class="myarchive__item-teaser"><img src='{{ image | relative_url }}'></div>
       <h1 class=".myarchive__item-title">{{ post.title | escape }}</h1>
     <p style="font-size: 80%;" class="myarchive__item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
     </div>   
