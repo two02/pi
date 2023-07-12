@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: myarchive
 permalink: /blog/
 title: 'Blog'
 
@@ -10,5 +10,8 @@ header:
 
     {% for post in site.tags['blog'] %}
 
-    <div onclick="location.href='{{ post.url | relative_url }}'">{{ post.title | escape }}</div>
-    {% endfor %}
+    <div class="mycard" onclick="location.href='{{ post.url | relative_url }}'">
+      <div class="myarchive__item-teaser"><img src='{{ post.header.overlay_image | relative_url }}'></div>
+      <h1 class=".myarchive__item-title">{{ post.title | escape }}</h1>
+    <p style="font-size: 80%;" class="myarchive__item-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
+</div>    {% endfor %}
