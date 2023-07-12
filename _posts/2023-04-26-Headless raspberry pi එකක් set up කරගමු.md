@@ -2,6 +2,7 @@
 layout: posts
 categories: hacking 
 tags: projects hacking blog
+excerpt_separator: <!--end_excerpt-->
 
 header:
   overlay_image: "static/image-removebg-preview.png"
@@ -10,6 +11,7 @@ header:
 
 
 Headless විදිහට රාස්බෙරි පයි එකක් set up කරාම ආයෙ ඒකට screen එකක් ඕන වෙන්නෙ නෑ. ඒ නිසා Monitor එකක් නැති හෝ desktop environment එක පාවිච්චි කරල එපා උන ඔයාටම හරියන විදිහක් තමා මේක.
+<!--end_excerpt-->
 
 Headless විදිහට රාස්බෙරි පයි එකක් set up කරගන්න එකේ වාසි ටික්කුත් තියෙනවා.
 1. Current එක යනවා අඩුයි.
