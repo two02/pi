@@ -60,3 +60,41 @@
     flex: 1;
   }
 }  
+
+
+
+.mygrid-container {
+  display: grid;
+  padding: 10px;
+  gap: 10px 10px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* Style the counter cards */
+.mycard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 1em;
+  text-align: center;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+/* Responsive layout - makes two columns with same hight in medium screens */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .mygrid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  }
+
+
+/* Responsive layout - makes one columns with same hight in medium screens */
+@media screen and (max-width: 600px) {
+  .mygrid-container {
+    grid-template-columns: 1fr;
+
+  }}

@@ -4,58 +4,18 @@ classes: wide
 
 ---
 
-
-<style>
-.grid-container {
-  display: grid;
-  padding: 10px;
-  gap: 10px 10px;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 1em;
-  text-align: center;
-  background-size: cover;
-  overflow: hidden;
-
-}
-
-/* Responsive layout - makes two columns with same hight in medium screens */
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-  }
-
-
-/* Responsive layout - makes one columns with same hight in medium screens */
-@media screen and (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-
-  }}
-
-</style>
 {{ content }}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
 
 {% capture category %}{{ page.categories | first }}{% endcapture %}
 
     {% assign posts = site.tags[category] %}
-<div class="grid-container">
+<div class="mygrid-container">
 
 {% for post in posts %}
    
         
-        <div class="card" onclick="location.href='{{ post.url | relative_url }}'">
+        <div class="mycard" onclick="location.href='{{ post.url | relative_url }}'">
             <div>
               <div class="archive__item-teaser"><img src='{{ post.header.overlay_image | relative_url }}'></div>
               <h1 class=".archive__item-title">{{ post.title | escape }}</h1>
