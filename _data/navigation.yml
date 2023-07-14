@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: /
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  #- title: "Quick-Start Guide"
+    #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Blog"
     url: /blog/
   - title: "About"
@@ -22,6 +22,8 @@ main:
 
 getting-started:
   - title: "getting-started"
-    url: /getting-started/#page_1/
+    url: /getting-started/#page_1
   - title: "මොකක්ද ගන්න ඕන raspberry pi එක."
     url: /getting-started/#page_2
+  - title: "මොනවද අවශ්‍ය කරන අනිත් දේවල්"
+    url: /getting-started/#page_3
