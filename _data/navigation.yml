@@ -18,3 +18,10 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+
+getting-started:
+  - title: "getting-started"
+    url: /getting-started/#page_1/
+  - title: "මොකක්ද ගන්න ඕන raspberry pi එක."
+    url: /getting-started/#page_2
