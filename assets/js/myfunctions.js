@@ -1,8 +1,8 @@
-// Add active class to the current button (highlight it)
+
 const navItems = document.getElementsByTagName("li");
 for (var i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener("click", function() {
-  selectElement(this)
+  modifyElement(this)
   });
 }
 
@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entries) => {
           // The element is in view
           console.log("Element is in view! ID:", entry.target.id);
           var element = document.getElementById(entry.target.id);
-          selectElement(element)
+          modifyElement(element)
       }
   });
 });
@@ -27,11 +27,14 @@ for (var i = 0; i < sectionItems.length; i++) {
 }
 
 
-function selectElement(element) {
+
+
+function modifyElement(element) {
 let currents = document.getElementsByClassName("myactive");
-  let current = currents[0]
+  let current = currents[0];
   current?.classList.remove("myactive");
   element.classList.add("myactive");
 }
 
-// modify above function to display required section of a page when  next button for navigation link clicked  //
+
+
