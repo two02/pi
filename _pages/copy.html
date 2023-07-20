@@ -1,0 +1,75 @@
+---
+permalink: /copy/
+---
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+        html, body {
+      height: 100%;
+      margin: 0;
+        }
+    
+        .code-snippet {
+            background-color: aliceblue;
+            .copy-btn {
+                background-color: aliceblue;
+                font-size: 24px;
+                border: 0;
+            }
+        }
+    
+    </style>
+    <div class="code-snippet">
+    <button class="copy-btn"><i class="material-icons">content_copy</i></button>
+    
+    <pre>bla bla blacksheep
+        have you any wool
+            yes sir 
+                yes sir
+    </pre>
+    </div>
+
+    <div class="code-snippet">
+        <button class="copy-btn"><i class="material-icons">content_copy</i></button>
+        
+        <pre>
+            
+                gwhvf fdd ss  dsss    d
+                    ddd
+                      
+                    ff
+                      gg
+        </pre>
+        </div>
+
+
+<script>
+
+const copyContainer = document.getElementsByClassName("code-snippet");
+for (var i = 0; i < copyContainer.length; i++) {
+    copyBtn = copyContainer[i].getElementsByClassName("copy-btn");
+    copyBtn[0].addEventListener("click", function() {
+    parent = this.parentNode;
+    let copyText = parent.querySelector("pre");
+    navigator.clipboard.writeText(copyText.innerText).then(function() {
+      console.log("Copied to clipboard");
+    }, function(err) {
+      console.error("Could not copy text: ", err);
+    });
+  });
+}
+
+  
+
+</script>
+
+</body>
+</html>
+
+
