@@ -12,14 +12,6 @@ main:
     url: /contact/
   - title: "Projects"
     url: /projects/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
-
-
 getting-started:
   - title: "getting-started"
     url: /getting-started/#page_1
@@ -27,3 +19,4 @@ getting-started:
     url: /getting-started/#page_2
   - title: "මොනවද අවශ්‍ය කරන අනිත් දේවල්"
     url: /getting-started/#page_3
+
