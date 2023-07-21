@@ -1,4 +1,4 @@
-
+/*
 const navItems = document.getElementsByTagName("li");
 for (var i = 0; i < navItems.length; i++) {
   navItems[i].addEventListener("click", function() {
@@ -38,3 +38,4 @@ let currents = document.getElementsByClassName("myactive");
 
 
 
+*/
