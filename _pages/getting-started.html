@@ -9,7 +9,18 @@ sidebar:
   nav: getting-started
 
 ---
-<section id="page_1">
+<style>
+  section {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+</style>
+
+
+<section id="page_1" class="active">
     <p>Raspberry pi වලට අලුත් ඔයාට දැවෙන ප්‍රශ්න ගොඩක් ඇති දැනටත්. අපේ මේ ලිපිය කියවල ඉවර උනාම ඒ ප්‍රශ්නවලට උත්තර හම්බවේවි.
     </p>
     <p>අපි මුලින්ම ඔයා ගන්න ඕන රාස්බෙරි පයි එක මොකක්ද කියල බලලා, ඊලඟට ඒක setup කරගන්නෙ කොහොමද කියල මේ tutorial එකෙන් කියල දෙනවා.
@@ -82,6 +93,41 @@ sidebar:
     රාස්බෙරි පයි 4, රාස්බෙරි පයි 3 සහ රාස්බෙරි පයි zero wifi වලිනුත් internet එකට connect කරන්න පුලුවන්.
   </p>
 </section>
+<div>
+  <button onclick="goBack()">Back</button>
+  <button onclick="goNext()">next</button>
+</div>
 
 
 <script src="/pi/assets/js/myfunctions.js"></script>
+
+<script>
+  var i = 0;
+  let sections = document.getElementsByTagName("section");
+  /*[...sections].forEach(element => {
+    element.style.display='none';
+  });
+*/
+
+/*function goBack() {
+let currents = document.getElementsByClassName("myactive");
+  let current = currents[0];
+  current?.classList.remove("myactive");
+  element.classList.add("myactive");
+}
+*/
+
+function goNext() {
+  sections[i]?.classList.remove("active");
+  
+  i = i+1;
+  sections[i].classList.add("active");
+}
+
+function goBack() {
+  sections[i]?.classList.remove("active");
+  i = i-1;
+  sections[i].classList.add("active")
+}
+
+</script>
