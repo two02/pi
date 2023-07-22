@@ -8,6 +8,10 @@
     margin: 10px 10px 10px 10px;
     border-radius: 25px;
     transition: all .2s ease-in-out; 
+
+    h2, p {
+      color: black;
+    }
   }
 
 /* Clear floats after the columns */
