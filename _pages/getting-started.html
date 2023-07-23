@@ -4,9 +4,6 @@ layout: archive
 author_profile: false
 classes: wide
 
-sidebar:
-  title: "getting-started"
-  nav: getting-started
 
 ---
 <style>
@@ -18,9 +15,19 @@ sidebar:
     display: block;
   }
 </style>
+<div class="sidebar sticky">
+<nav class="nav__list"><input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul id="sidebar_nav" class="nav__items">
+  </ul>
+</nav>
+</div>
 
 
 <section id="page_1" class="active">
+    <li>
+      <span class="nav__sub-title">getting-started</span>
+    </li>
     <p>Raspberry pi වලට අලුත් ඔයාට දැවෙන ප්‍රශ්න ගොඩක් ඇති දැනටත්. අපේ මේ ලිපිය කියවල ඉවර උනාම ඒ ප්‍රශ්නවලට උත්තර හම්බවේවි.
     </p>
     <p>අපි මුලින්ම ඔයා ගන්න ඕන රාස්බෙරි පයි එක මොකක්ද කියල බලලා, ඊලඟට ඒක setup කරගන්නෙ කොහොමද කියල මේ tutorial එකෙන් කියල දෙනවා.
@@ -33,6 +40,9 @@ sidebar:
     </p>   
 </section>
 <section id="page_2">
+  <li>
+    <span class="nav__sub-title">මොකක්ද ගන්න ඕන raspberry pi එක.</span>
+  </li>
   <h4>මොකක්ද ගන්න ඕන raspberry pi එක.</h4>
   <p>රාස්බෙරි පයි වර්ග ගොඩක් තියෙනවා. ඒත් ගොඩක් අය තෝරගන්නෙ රාස්බෙරි පයි 4 model B. ඒක තමා අලුත්ම, වේගවත්ම හා වඩාත් පහසුවෙන්ම භාවිතා කරන්න පුලුවන් රාස්බෙරි පයි එක.එකෙත් ram එක 2GB එක ගොඩක් වැඩ කරගන්න ඇති.
   </p>
@@ -44,6 +54,9 @@ sidebar:
   </p>
 </section>
 <section id="page_3">
+  <li>
+    <span class="nav__sub-title">මොනවද අවශ්‍ය කරන අනිත් දේවල්</span>
+  </li>
   <h4>මොනවද අවශ්‍ය කරන අනිත් දේවල්
   </h4>
   <h6>SD card එකක්</h6>
@@ -104,10 +117,15 @@ sidebar:
 <script>
   var i = 0;
   let sections = document.getElementsByTagName("section");
-  /*[...sections].forEach(element => {
-    element.style.display='none';
+  [...sections].forEach(section => {
+    let lis = section.getElementsByTagName('li');
+    let li = lis[0];
+    //li.addEventListener('click', gotoElement(this));
+    document.getElementById("sidebar_nav").insertAdjacentElement('beforeend', li);
   });
-*/
+
+  
+
 
 /*function goBack() {
 let currents = document.getElementsByClassName("myactive");
@@ -116,10 +134,9 @@ let currents = document.getElementsByClassName("myactive");
   element.classList.add("myactive");
 }
 */
-
+/*
 function goNext() {
   sections[i]?.classList.remove("active");
-  
   i = i+1;
   sections[i].classList.add("active");
 }
@@ -130,4 +147,65 @@ function goBack() {
   sections[i].classList.add("active")
 }
 
+function gotoElement(li) {
+  element = li.parentNode;
+  let currents = document.getElementsByClassName("active");
+  let current = currents[0];
+  current?.classList.remove("active");
+  element.classList.add("active");
+}
+function disElements(i) {
+[...sections].forEach(section => {
+  if ([...sections].indexOf(section) == i) {
+    section.classList.add('active');
+  }
+  else {
+    section?.classList.remove("active");
+  }
+});
+};
+
+disElements(i)
+
+
+function goNext() {
+  i = i+1;
+  console.log(i);
+  disElements(i)
+}
+*/
+
+function showElement(i) {
+  let currents = document.getElementsByClassName("active");
+  let current = currents[0];
+  current?.classList.remove("active");
+  sections[i].classList.add("active");
+}
+
+function refreshI(i) {
+  //let currents = document.getElementsByClassName("active");
+  //let current = currents[0];
+  //i = [...sections].indexOf(current);
+  console.log(i)
+  let buttons = document.getElementsByTagName('button');
+  if (i == 0) {
+    buttons[0].style.display = 'none'
+    console.log('done')
+  };
+  if (i == sections.length - 1) {
+    buttons[1].style.display = 'none'
+  };
+};
+
+function goBack() {
+  i = i - 1;
+  showElement(i);
+  refreshI(i);
+}
+
+function goNext() {
+  i = i + 1;
+  showElement(i);
+  refreshI(i);
+}
 </script>
