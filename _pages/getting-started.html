@@ -96,117 +96,21 @@ sidebar:
 </section>
 <div>
   <button id="back">Back</button>
-  <button id="next">next</button>
+  <button id="next">Next</button>
 </div>
 
 
 <script src="/pi/assets/js/myfunctions.js"></script>
 
 <script>
-  /*
-  [...sections].forEach(section => {
-    let lis = section.getElementsByTagName('li');
-    let li = lis[0];
-    //li.addEventListener('click', gotoElement(this));
-    document.getElementById("sidebar_nav").insertAdjacentElement('beforeend', li);
-  });
-
-  */
-
-
-/*function goBack() {
-let currents = document.getElementsByClassName("myactive");
-  let current = currents[0];
-  current?.classList.remove("myactive");
-  element.classList.add("myactive");
-}
-*/
-/*
-function goNext() {
-  sections[i]?.classList.remove("active");
-  i = i+1;
-  sections[i].classList.add("active");
-}
-
-function goBack() {
-  sections[i]?.classList.remove("active");
-  i = i-1;
-  sections[i].classList.add("active")
-}
-
-function gotoElement(li) {
-  element = li.parentNode;
-  let currents = document.getElementsByClassName("active");
-  let current = currents[0];
-  current?.classList.remove("active");
-  element.classList.add("active");
-}
-function disElements(i) {
-[...sections].forEach(section => {
-  if ([...sections].indexOf(section) == i) {
-    section.classList.add('active');
-  }
-  else {
-    section?.classList.remove("active");
-  }
-});
-};
-
-disElements(i)
-
-
-function goNext() {
-  i = i+1;
-  console.log(i);
-  disElements(i)
-}
-*/
-
-
-/*
-function showElement(i) {
-  let currents = document.getElementsByClassName("active");
-  let current = currents[0];
-  current?.classList.remove("active");
-  sections[i].classList.add("active");
-}
-
-function refreshI(i) {
-  //let currents = document.getElementsByClassName("active");
-  //let current = currents[0];
-  //i = [...sections].indexOf(current);
-  console.log(i)
-  let buttons = document.getElementsByTagName('button');
-  if (i == 0) {
-    buttons[0].style.display = 'none'
-    console.log('done')
-  };
-  if (i == sections.length - 1) {
-    buttons[1].style.display = 'none'
-  };
-};
-
-function goBack() {
-  i = i - 1;
-  showElement(i);
-  refreshI(i);
-}
-
-function goNext() {
-  i = i + 1;
-  showElement(i);
-  refreshI(i);
-}
-
-*/
+ 
 const main = document.getElementById('main');
 const lis = main.getElementsByTagName('li');
 const sections = document.getElementsByTagName("section");
 const back = document.getElementById('back');
 const next = document.getElementById('next');
 
-//adding 'myactive' class to 1st item on list
-lis[0].classList.add('myactive');
+
 
 [...lis].forEach(li => {
     li.addEventListener('click', function() {
@@ -235,7 +139,20 @@ function gotoElement(i) {
     let activeLis = main.getElementsByClassName('myactive');
     activeLis[0]?.classList.remove('myactive');
     lis[i].classList.add('myactive');
+    switch (i) {
+        case 0:
+            back.style.display = 'none';
+            break;
+        case sections.length-1:
+            next.style.display = 'none';
+            break;
+        default:
+            back.style.display = 'inline';
+            next.style.display = 'inline';
+
+    }
 }
 
-
+//adding 'myactive' class to 1st item on list
+gotoElement(0)
 </script>
