@@ -4,6 +4,8 @@ layout: archive
 author_profile: false
 classes: wide
 
+sidebar:
+  nav: getting-started
 
 ---
 <style>
@@ -15,19 +17,9 @@ classes: wide
     display: block;
   }
 </style>
-<div class="sidebar sticky">
-<nav class="nav__list"><input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
-  <ul id="sidebar_nav" class="nav__items">
-  </ul>
-</nav>
-</div>
-
 
 <section id="page_1" class="active">
-    <li>
-      <span class="nav__sub-title">getting-started</span>
-    </li>
+    
     <p>Raspberry pi වලට අලුත් ඔයාට දැවෙන ප්‍රශ්න ගොඩක් ඇති දැනටත්. අපේ මේ ලිපිය කියවල ඉවර උනාම ඒ ප්‍රශ්නවලට උත්තර හම්බවේවි.
     </p>
     <p>අපි මුලින්ම ඔයා ගන්න ඕන රාස්බෙරි පයි එක මොකක්ද කියල බලලා, ඊලඟට ඒක setup කරගන්නෙ කොහොමද කියල මේ tutorial එකෙන් කියල දෙනවා.
@@ -40,9 +32,7 @@ classes: wide
     </p>   
 </section>
 <section id="page_2">
-  <li>
-    <span class="nav__sub-title">මොකක්ද ගන්න ඕන raspberry pi එක.</span>
-  </li>
+  
   <h4>මොකක්ද ගන්න ඕන raspberry pi එක.</h4>
   <p>රාස්බෙරි පයි වර්ග ගොඩක් තියෙනවා. ඒත් ගොඩක් අය තෝරගන්නෙ රාස්බෙරි පයි 4 model B. ඒක තමා අලුත්ම, වේගවත්ම හා වඩාත් පහසුවෙන්ම භාවිතා කරන්න පුලුවන් රාස්බෙරි පයි එක.එකෙත් ram එක 2GB එක ගොඩක් වැඩ කරගන්න ඇති.
   </p>
@@ -54,9 +44,7 @@ classes: wide
   </p>
 </section>
 <section id="page_3">
-  <li>
-    <span class="nav__sub-title">මොනවද අවශ්‍ය කරන අනිත් දේවල්</span>
-  </li>
+  
   <h4>මොනවද අවශ්‍ය කරන අනිත් දේවල්
   </h4>
   <h6>SD card එකක්</h6>
@@ -107,16 +95,15 @@ classes: wide
   </p>
 </section>
 <div>
-  <button onclick="goBack()">Back</button>
-  <button onclick="goNext()">next</button>
+  <button id="back">Back</button>
+  <button id="next">next</button>
 </div>
 
 
 <script src="/pi/assets/js/myfunctions.js"></script>
 
 <script>
-  var i = 0;
-  let sections = document.getElementsByTagName("section");
+  /*
   [...sections].forEach(section => {
     let lis = section.getElementsByTagName('li');
     let li = lis[0];
@@ -124,7 +111,7 @@ classes: wide
     document.getElementById("sidebar_nav").insertAdjacentElement('beforeend', li);
   });
 
-  
+  */
 
 
 /*function goBack() {
@@ -175,6 +162,8 @@ function goNext() {
 }
 */
 
+
+/*
 function showElement(i) {
   let currents = document.getElementsByClassName("active");
   let current = currents[0];
@@ -208,4 +197,45 @@ function goNext() {
   showElement(i);
   refreshI(i);
 }
+
+*/
+const main = document.getElementById('main');
+const lis = main.getElementsByTagName('li');
+const sections = document.getElementsByTagName("section");
+const back = document.getElementById('back');
+const next = document.getElementById('next');
+
+//adding 'myactive' class to 1st item on list
+lis[0].classList.add('myactive');
+
+[...lis].forEach(li => {
+    li.addEventListener('click', function() {
+        gotoElement([...lis].indexOf(this));
+    });
+});
+
+back.addEventListener('click', function() {
+    let currents = document.getElementsByClassName("active");
+    let index = [...sections].indexOf(currents[0]);
+    gotoElement(index-1);
+});
+
+next.addEventListener('click', function() {
+    let currents = document.getElementsByClassName("active");
+    let index = [...sections].indexOf(currents[0]);
+    gotoElement(index+1);
+});
+
+
+
+function gotoElement(i) {
+    let currents = document.getElementsByClassName("active");
+    currents[0]?.classList.remove('active');
+    sections[i].classList.add('active');
+    let activeLis = main.getElementsByClassName('myactive');
+    activeLis[0]?.classList.remove('myactive');
+    lis[i].classList.add('myactive');
+}
+
+
 </script>
