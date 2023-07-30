@@ -114,7 +114,92 @@
 
 
 
+/* for pagebreaker include */
+.display-section {
+  display: none;
+}
 
+.show-now {
+  display: block;
+}
+
+.pagebreaker-button-container {
+  display: inline;
+}
+
+.pagebreaker-button-container > button:focus {
+        outline: none;
+      }
+
+  #next, #back {
+    display: inline-block;
+    border-radius: 40px;
+    background-color: #00adb5;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    color: #252a34;
+
+  }
+  
+  .pagebreaker-button-container > button > span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #next span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #back span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+
+  #next:hover span {
+    padding-right: 25px;
+  }
+
+  #back:hover span {
+    padding-left: 25px;
+  }
+  
+  #next:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  #back:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+  
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -177,4 +262,6 @@ media Query
   grid-template-columns: 1fr 1fr;
 }
 }  
+
+
 

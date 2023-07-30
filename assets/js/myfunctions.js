@@ -57,13 +57,13 @@ let currents = document.getElementsByClassName("myactive");
  });
  
  back.addEventListener('click', function() {
-     let currents = document.getElementsByClassName("active");
+     let currents = document.getElementsByClassName("show-now");
      let index = [...sections].indexOf(currents[0]);
      gotoElement(index-1);
  });
  
  next.addEventListener('click', function() {
-     let currents = document.getElementsByClassName("active");
+     let currents = document.getElementsByClassName("show-now");
      let index = [...sections].indexOf(currents[0]);
      gotoElement(index+1);
  });
@@ -71,9 +71,9 @@ let currents = document.getElementsByClassName("myactive");
  
  
  function gotoElement(i) {
-     let currents = document.getElementsByClassName("active");
-     currents[0]?.classList.remove('active');
-     sections[i].classList.add('active');
+     let currents = document.getElementsByClassName("show-now");
+     currents[0]?.classList.remove('show-now');
+     sections[i].classList.add('show-now');
      let activeLis = main.getElementsByClassName('myactive');
      activeLis[0]?.classList.remove('myactive');
      lis[i].classList.add('myactive');
