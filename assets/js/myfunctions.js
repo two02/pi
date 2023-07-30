@@ -78,17 +78,19 @@ let currents = document.getElementsByClassName("myactive");
      activeLis[0]?.classList.remove('myactive');
      lis[i].classList.add('myactive');
      switch (i) {
-         case 0:
-             back.style.display = 'none';
-             break;
-         case sections.length-1:
-             next.style.display = 'none';
-             break;
-         default:
-             back.style.display = 'inline';
-             next.style.display = 'inline';
- 
-     }
+      case 0:
+          back.style.display = 'none';
+          next.style.display = 'inline';
+          break;
+      case sections.length-1:
+          next.style.display = 'none';
+          back.style.display = 'inline';
+          break;
+      default:
+          back.style.display = 'inline';
+          next.style.display = 'inline';
+
+  }
  }
  
  //adding 'myactive' class to 1st item on list
