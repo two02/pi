@@ -74,6 +74,7 @@ let currents = document.getElementsByClassName("myactive");
      let currents = document.getElementsByClassName("show-now");
      currents[0]?.classList.remove('show-now');
      sections[i].classList.add('show-now');
+     sections[i].scrollIntoView();
      let activeLis = main.getElementsByClassName('myactive');
      activeLis[0]?.classList.remove('myactive');
      lis[i].classList.add('myactive');
