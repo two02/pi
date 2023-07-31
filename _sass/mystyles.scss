@@ -114,7 +114,7 @@
 
 /* for side bar */
 .myactive {
-  box-shadow: 0 5px 0 0 $link-color;
+  color: $link-color;
 }
 
 
@@ -269,4 +269,8 @@ media Query
 }  
 
 
-
+@media screen and (min-width: 1023px) {
+  .myactive {
+    box-shadow: 0 1px 0 0 $link-color;
+  }
+}
