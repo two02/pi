@@ -3,7 +3,7 @@ layout: projectcategory
 permalink: /si/projects/
 title: Projects
 entries_layout: grid
-categories: si [projects]
+categories: si 
 
 header:
   overlay_image: "static/siteimages/projets featured img.png"

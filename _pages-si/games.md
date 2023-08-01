@@ -1,8 +1,8 @@
 ---
 layout: projectcategory
 permalink: /si/projects/games/
-title: "games"
-categories: si [games]
+title: "Games"
+categories: si 
 
 header:
   overlay_image: "static/image-removebg-preview.png"

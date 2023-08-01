@@ -1,6 +1,6 @@
 ---
 layout: posts
-tags: projects hacking
+tags: projects hacking robotics
 excerpt_separator: <!--end_excerpt-->
 categories: si 
 

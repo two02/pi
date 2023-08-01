@@ -18,7 +18,11 @@
     {% include_cached skip-links.html %}
     {% capture pageurl %}{{ page.url }}{% endcapture %}
     {% capture categories %}{{ page.categories }}{% endcapture %}
+    {% if categories == "si" %}
+    {% include_cached masthead-si.html pageurl=pageurl categories=categories %}
+    {% else %}
     {% include_cached masthead.html pageurl=pageurl categories=categories %}
+    {% endif %}
 
     <div class="initial-content">
       {{ content }}

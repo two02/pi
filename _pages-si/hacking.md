@@ -2,7 +2,7 @@
 layout: projectcategory
 permalink: /si/projects/hacking/
 title: "Hacking"
-categories: si [hacking]
+categories: si 
 
 header:
   overlay_image: "static/siteimages/learn to hack featured img.png"

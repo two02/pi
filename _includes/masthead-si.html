@@ -5,22 +5,22 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/si/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
-        <a class="site-title" href="{{ '/' | relative_url }}">
+        <a class="site-title" href="{{ '/si/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         {% unless pageurl == "/404.html" %}
-        {% capture siurl %}{{ pageurl | prepend: "/si" }}{% endcapture %}
-        <a href="{{ siurl | relative_url }}"><span>සිං</span></a>
-        <a href="{{ pageurl | relative_url }}"><span>Eng</span></a>
+        {% capture engurl %}{{ pageurl | remove_first: "si/" }}{% endcapture %}
+        <a href="{{ pageurl | relative_url }}"><span>සිං</span></a>
+        <a href="{{ engurl | relative_url }}"><span>Eng</span></a>
         {% endunless %}
 
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+              <a href="{{ link.url | prepend: "/si" | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
             </li>
           {%- endfor -%}
         </ul>
