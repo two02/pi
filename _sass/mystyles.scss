@@ -15,9 +15,13 @@
     border-radius: 25px;
     transition: all .2s ease-in-out; 
     background-color:#aaaaaa74;
+    text-decoration: none;
 
     h2, p {
       color: black;
+    }
+    p {
+      font-size: 80%;
     }
   }
 
