@@ -11,7 +11,9 @@ header:
 ---
 
 <div class="myblog-grid-container">
-    {% for post in site.posts %}
+  {% assign posts = site.posts | where: "categories", "si" %}
+
+    {% for post in posts %}
 
     {% if post.header.overlay_image %}
       {% assign image = post.header.overlay_image %}
