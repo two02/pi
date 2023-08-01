@@ -1,6 +1,6 @@
 ---
 layout: posts
-categories: games
+categories: 
 tags: projects games robotics
 
 header:

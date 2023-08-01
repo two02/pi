@@ -1,8 +1,8 @@
 ---
 layout: posts
-categories: 
 tags: projects hacking
 excerpt_separator: <!--end_excerpt-->
+categories: si 
 
 header:
   overlay_image: "static/let-us-build-a-robot.png"

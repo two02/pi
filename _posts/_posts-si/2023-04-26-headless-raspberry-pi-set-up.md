@@ -1,6 +1,6 @@
 ---
 layout: posts
-categories:  
+categories: si 
 tags: projects hacking
 excerpt_separator: <!--end_excerpt-->
 

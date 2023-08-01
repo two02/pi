@@ -1,5 +1,6 @@
 ---
 layout: posts
+categories: si
 tags: projects hacking
 
 ---
