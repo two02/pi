@@ -1,7 +1,7 @@
 ---
 layout: posts
-categories: hacking
-tags: projects hacking blog
+categories: si
+tags: projects hacking
 
 ---
 

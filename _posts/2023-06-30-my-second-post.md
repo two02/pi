@@ -1,7 +1,7 @@
 ---
 layout: posts
 categories: games
-tags: projects games robotics blog
+tags: projects games robotics
 
 header:
   overlay_image: false

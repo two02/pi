@@ -9,7 +9,7 @@ header:
 ---
 
 <div class="myblog-grid-container">
-    {% for post in site.tags['blog'] %}
+    {% for post in site.posts %}
 
     {% if post.header.overlay_image %}
       {% assign image = post.header.overlay_image %}
