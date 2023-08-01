@@ -12,6 +12,13 @@ layout: myarchive
   {% assign posts = site.posts %}
 {% endif %}
 
+{% if page.categories == "si" %}
+    {% assign posts = posts | where: "categories", "si" %}
+
+{% else %}
+    {% assign posts = posts | where: "categories", empty %}
+{% endif %}
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
