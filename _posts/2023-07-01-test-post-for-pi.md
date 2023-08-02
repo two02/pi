@@ -1,6 +1,7 @@
 ---
 layout: posts
 tags: projects hacking
+comments: true
 
 ---
 
