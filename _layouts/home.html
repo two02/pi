@@ -16,7 +16,7 @@ layout: myarchive
     {% assign posts = posts | where: "categories", "si" %}
 
 {% else %}
-    {% assign posts = posts | where: "categories", empty %}
+  {% assign posts = posts | where_exp: "item", "item.categories == empty" %}
 {% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}

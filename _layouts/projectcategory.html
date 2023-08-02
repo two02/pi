@@ -14,7 +14,7 @@ classes: wide
 
 {% else %}
     {% assign both_posts = site.tags[tag] %}
-    {% assign posts = both_posts | where: "categories", empty %}
+    {% assign posts = both_posts | where_exp: "item", "item.categories == empty" %}
 {% endif %}
 <div class="mygrid-container">
 
