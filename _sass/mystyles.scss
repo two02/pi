@@ -224,6 +224,29 @@
 }
 
 
+/* styles for copy include */
+.code-snippet {
+  background-color: $code-background-color-dark;
+  padding: 20px;
+
+  .copy-btn {
+      outline: none;
+      background-color: $code-background-color-dark;
+      font-size: 24px;
+      border: 0;
+
+  }
+
+  i {
+    color: $text-color;
+  }
+
+  pre {
+    padding: 20px;
+  }
+}
+
+
 
 
 

@@ -27,6 +27,10 @@ Menu › Preferences › Recommended Software කියන තැනට ගි�
 
 raspberry pi os එක install කරද්දි ssh enable කරගන්න. ssh enable කරගන්න විදිහ මේ post එකෙන් බලාගන්න පුලුවන්.(raspberry pi os එකේ desktop version එකම install කරගත්තොත් කෙලින්ම ඒ desktop එක load කරගන්න පුලුවන් vnc viewer එකෙන්, නැත්තම් lite version එක install කරොත් ඒකියන්නෙ headless රාස්බෙරි පයි එකක් නම් තියෙන්නෙ ඔයාට virtual desktop එකක් හදාගන්න පුලුවන් vnc එකෙන්ම. )
 ඊට පස්සේ sshවලින් log වෙලා vnc එක install කරගන්න පහල command දෙක type කරන්න.
+
+{% include copy.html content="sudo apt update
+sudo apt install realvnc-vnc-server realvnc-vnc-viewer" %}
+
 sudo apt update
 sudo apt install realvnc-vnc-server realvnc-vnc-viewer
 ඊලගට තියෙන්නෙ vnc එක enable කරගන්න. ඒකට පහල command එක type කරන්න.
