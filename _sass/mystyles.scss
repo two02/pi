@@ -247,6 +247,19 @@
 }
 
 
+/* active language masthead styles */
+.lang-select {
+  display: flex;
+  
+  a {
+    margin: 5px;
+  }
+}
+
+
+#lang-active {
+  border-bottom: 5px solid $primary-color;
+}
 
 
 
@@ -284,7 +297,9 @@ media Query
       grid-area: 3 / 1;
     }
   }
-  
+  #lang-active {
+    display: none;
+  }
 }
 
 

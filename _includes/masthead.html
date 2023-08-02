@@ -13,8 +13,10 @@
         </a>
         {% unless pageurl == "/404.html" %}
         {% capture siurl %}{{ pageurl | prepend: "/si" }}{% endcapture %}
+        <span class="lang-select">
         <a href="{{ siurl | relative_url }}"><span>සිං</span></a>
-        <a href="{{ pageurl | relative_url }}"><span>Eng</span></a>
+        <a id="lang-active" href="{{ pageurl | relative_url }}"><span>Eng</span></a>
+        </span>
         {% endunless %}
 
         <ul class="visible-links">
