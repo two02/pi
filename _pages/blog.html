@@ -10,15 +10,6 @@ header:
 
 <div class="myblog-grid-container">
     {% assign posts = site.posts %}
-<<<<<<< HEAD
-=======
-
-    {% comment %}
-    {% assign enposts = posts | where: "categories", empty %}
-    this only works for jekyll version > 4. therefore not work in github pages
-    {% endcomment %}
-
->>>>>>> 48027130 (fixed filtering english posts)
     {% assign enposts = posts | where_exp: "item", "item.categories == empty" %}
     {% for post in enposts %}
     {% if post.header.overlay_image %}
