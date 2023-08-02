@@ -10,8 +10,8 @@ header:
 
 <div class="myblog-grid-container">
     {% assign posts = site.posts %}
-    {% assign enposts = posts | where: "categories", empty %}
-    {% for post in posts %}
+    {% assign enposts = posts | where: "categories", none %}
+    {% for post in enposts %}
     {% if post.header.overlay_image %}
       {% assign image = post.header.overlay_image %}
     {% else %}
