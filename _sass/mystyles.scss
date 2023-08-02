@@ -208,8 +208,20 @@
   }
   
 
+/*404 page*/
+ #page404 {
+  justify-content: center;
+  text-align: center;
 
-
+  h1 {
+    font-size: 10vw;
+  }
+  button {
+    background-color: #00adb5;
+    padding: 20px;
+    border-radius: 40px;
+  }
+}
 
 
 
