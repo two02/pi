@@ -15,6 +15,10 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "minimal-mistakes-jekyll"
+gem "hpricot"
+gem "open_uri_redirections"
+gem "safe_yaml"
+gem "jekyll-import"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
