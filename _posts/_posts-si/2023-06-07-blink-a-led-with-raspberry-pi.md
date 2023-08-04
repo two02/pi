@@ -6,10 +6,16 @@ type: post
 categories: si
 tags: robotics
 
+header:
+  overlay_image: "static/2023/06/featured-img-for-blinking-LED-with-rpi.png"
+  overlay_filter: 0.5
+
 ---
-<p>රොබෝ කෙනෙක් හදන්න කලින් පොඩ්ඩක් ලේසි දේකින් පටන් ගත්තොත් හොදයි කියල හිතුනා. මේ project එක ඉවර වෙද්දි රාස්බෙරි පයි එකක් පාවිච්චි කරල LED එකක් blink කරන හැටි ඔයා ඉගෙන ගනීවි.</p>
-<p>ඕන කරන දේවල්.<br />
-set up කරගත්ත රාස්බෙරි පයි එකක්<br />
+රොබෝ කෙනෙක් හදන්න කලින් පොඩ්ඩක් ලේසි දේකින් පටන් ගත්තොත් හොදයි කියල හිතුනා. මේ project එක ඉවර වෙද්දි රාස්බෙරි පයි එකක් පාවිච්චි කරල LED එකක් blink කරන හැටි ඔයා ඉගෙන ගනීවි.
+
+
+#### ඕන කරන දේවල්.
+<p>set up කරගත්ත රාස්බෙරි පයි එකක්<br />
 LED එකක්<br />
 100 ohm හෝ ඊට පොඩ්ඩක් වැඩි resistor එකක්<br />
 jumper cables</p>
@@ -24,16 +30,20 @@ LED එකයි resistor එකයි ශ්‍රේණි ගතව තිය
 <h4>Pythonවලින් Code කරමු.</h4>
 <p>ඔයාගේ රාස්බෙරි පයි එකෙන් Python code editor එකක් open කරගන්න. Thonny කියන්නෙ එවගේ code editor එකක්.<img src="{{ site.baseurl }}/static/2023/06/open-thonny.png" /><br />
 පහල තියෙන Code එක copy කරගෙන paste කරන්න.</p>
-<p><code>import RPi.GPIO as GPIO<br />
-from time import sleep</code></p>
-<p><code>GPIO.setwarnings(False)<br />
-GPIO.setmode(GPIO.BCM)<br />
-GPIO.setup(18,GPIO.OUT)</code></p>
-<p><code>while True:</code></p>
-<p style="padding-left: 40px;"><code>GPIO.output(18,GPIO.HIGH)<br />
-sleep(1)<br />
-GPIO.output(18,GPIO.LOW)<br />
-sleep(1)</code></p>
+
+{% include copy.html content="import RPi.GPIO as GPIO
+from time import sleep
+
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18,GPIO.OUT)
+
+while True:
+    GPIO.output(18,GPIO.HIGH)
+    sleep(1)
+    GPIO.output(18,GPIO.LOW)
+    sleep(1)" %}
+
 <p><img src="{{ site.baseurl }}/static/2023/06/paste-the-code.png" /></p>
 <p><strong> සමහර විට paste කරද්දි indentation එක නැති වෙන්න පුලුවන්. එහෙම උනොත් Tab එක ඔබල හරි space 4ක් තියල හරි indentation එක හදාගන්න.</strong><br />
 ඔයාගේ file එක save කරගන්න.<img src="{{ site.baseurl }}/static/2023/06/LED-blink-codesave.png" /><img src="{{ site.baseurl }}/static/2023/06/save-the-code.png" /></p>
