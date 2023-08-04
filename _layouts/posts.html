@@ -5,7 +5,12 @@ layout: archive
 {{ content }}
 
 <ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% capture categories %}{{ page.categories }}{% endcapture %}
+{% if categories == 'si' %}
+  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | where: "categories", "si" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% else %}
+  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | where_exp: "item", "item.categories == empty" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% endif %}
   {% for year in postsInYear %}
     <li>
       <a href="#{{ year.name }}">
@@ -19,9 +24,9 @@ layout: archive
 
 {% capture categories %}{{ page.categories }}{% endcapture %}
 {% if categories == 'si' %}
-{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" |where: "categories", "si" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | where: "categories", "si" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% else %}
-{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" |where_exp: "item", "item.categories == empty" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | where_exp: "item", "item.categories == empty" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% endif %}
 
 {% for year in postsByYear %}
