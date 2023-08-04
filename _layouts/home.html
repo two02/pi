@@ -25,5 +25,6 @@ layout: myarchive
     {% include archive-single.html type=entries_layout %}
   {% endfor %}
 </div>
-
+{% if paginate %}
 {% include paginator.html %}
+{% endif %}
