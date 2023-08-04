@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: කොහොමද IP Address එක හොයාගන්නේ.
 date: 2023-05-17 12:59:57.000000000 +05:30
 type: post
@@ -7,34 +7,24 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: []
-tags: []
-meta:
-  _edit_last: '2'
-  _et_post_bg_color: "#ffffff"
-  _et_post_bg_layout: light
-  _et_pb_show_title: 'on'
-  _et_pb_post_hide_nav: default
-  _et_pb_page_layout: et_right_sidebar
-  _et_pb_side_nav: 'off'
-  _et_pb_use_builder: ''
-  _et_pb_first_image: ''
-  _et_pb_truncate_post: ''
-  _et_pb_truncate_post_date: ''
-  _et_pb_old_content: ''
-  _wp_old_slug: "%e0%b6%9a%e0%b7%9c%e0%b7%84%e0%b7%9c%e0%b6%b8%e0%b6%af-ip-address-%e0%b6%91%e0%b6%9a-%e0%b7%84%e0%b7%9c%e0%b6%ba%e0%b7%8f%e0%b6%9c%e0%b6%b1%e0%b7%8a%e0%b6%b1%e0%b7%9a"
-  _thumbnail_id: '970'
-  _et_dynamic_cached_shortcodes: a:0:{}
-  _et_dynamic_cached_attributes: a:2:{s:16:"background_color";s:19:"RGBA(255,255,255,0)";s:23:"background_enable_color";s:2:"on";}
+categories: si
+tags: random projects
 author:
   login: TharakaJ
   email: tujayasena@gmail.com
   display_name: TharakaJ
   first_name: ''
   last_name: ''
-permalink: "/uncategorized/how-to-find-the-ip-address/"
+
+header:
+  overlay_image: "static/2023/06/finding-ip-adress-featured-img.png"
+  overlay_filter: 0.5
 ---
-<p>ඔයාගේ device එකේ IP Address එක හොයාගන්න විදි කිහිපයක් තියෙනවා. එකක් තමා Terminal එකේ <code>hostname -I</code> කියල type කරන එක. එතොකට ඔයාගෙ device එකේ IP Address එක බලාගන්න පුලුවන් වේවි.</p>
+ඔයාගේ device එකේ IP Address එක හොයාගන්න විදි කිහිපයක් තියෙනවා.
+
+
+එකක් තමා Terminal එකේ
+{% include copy.html content="hostname -I" %}  කියල type කරන එක. එතොකට ඔයාගෙ device එකේ IP Address එක බලාගන්න පුලුවන් වේවි.
 <p>Router එකේ devices list එකෙන්.<br />
 web browser එක්කින ඔයාගෙ router එකේ IP address එකට navigate වෙන්න. උදා:- http://192.168.1.1<br />
 ඔයාගේ router එකේ IP address එක මීට වඩා පොඩ්ඩක් වෙනස් වෙන්න පුලුවන්.<br />

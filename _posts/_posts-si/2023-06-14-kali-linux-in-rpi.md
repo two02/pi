@@ -1,39 +1,23 @@
 ---
-layout: post
+layout: posts
 title: රාස්බෙරි පයි එක්කින් hacking lab එකක් හදාගමු.
 date: 2023-06-14 10:06:35.000000000 +05:30
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- hacking
-tags: []
-meta:
-  _edit_last: '2'
-  _et_post_bg_color: "#ffffff"
-  _et_post_bg_layout: light
-  _et_pb_show_title: 'on'
-  _et_pb_post_hide_nav: default
-  _et_pb_page_layout: et_right_sidebar
-  _et_pb_side_nav: 'off'
-  _et_pb_use_builder: ''
-  _et_pb_first_image: ''
-  _et_pb_truncate_post: ''
-  _et_pb_truncate_post_date: ''
-  _et_pb_old_content: ''
-  _et_dynamic_cached_shortcodes: a:0:{}
-  _et_dynamic_cached_attributes: a:2:{s:16:"background_color";s:19:"RGBA(255,255,255,0)";s:23:"background_enable_color";s:2:"on";}
+categories: si
+tags: [hacking, projects]
 author:
   login: TharakaJ
   email: tujayasena@gmail.com
   display_name: TharakaJ
   first_name: ''
   last_name: ''
-permalink: "/uncategorized/kali-linux-in-rpi/"
+
+header:
+  overlay_image: false
+  overlay_filter: 0.5
 ---
-<p>hack කරන්න පටන් ගන්න කලින් hacking lab එකක් හදාගෙන ඉමු.</p>
+hack කරන්න පටන් ගන්න කලින් hacking lab එකක් හදාගෙන ඉමු.
+
+
 <p>Kali linux කියන්නේ hackinng tool ගොඩාක් කලින්ම install කරල hack කරන වැඩ වලටම විශේෂයෙන් හදපු OS එකක්. රාස්බෙරි පයිවලට විතරක් නෙවේ, ඔයාගේ PC එකට කෙලින්ම හරි නැත්තම් virtualbox වගේ පාවිච්චි කරල virtual machine එකක් විදිහට උනත් ඔයාට Kali linux පාවිච්චි කරන්න පුලුවන්. කොහොමහරි අද අපි කියල දෙන්නේ ඔයාගෙ රාස්බෙරි පයි එකට Kali linux install කරන හැටි.</p>
 <p>සාමාන්‍යයෙන් රාස්බෙරි පයි එකක් setup කරගන්නව වගේම තමා මේකත් setup කරගන්න තියෙන්නේ. රාස්බෙරි පයි imager එක download කරන් open කරගන්න.</p>
 <p>රාස්බෙරි පයි imager එක ගැන තව විස්තර ඕන්නම් මෙතන <a href="https://pi.lk/getting-started/setting-up-the-sd-card/" target="_blank" rel="noopener">ලින්ක් එක</a> ක්ලික් කරන්න.<br />
