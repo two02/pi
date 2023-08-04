@@ -14,6 +14,11 @@ main:
     url: /projects/
 getting-started:
   - title: "getting-started"
+    url: /si/getting-started/#page_1
   - title: "මොකක්ද ගන්න ඕන raspberry pi එක."
+    url: /si/getting-started/#page_2
+
   - title: "මොනවද අවශ්‍ය කරන අනිත් දේවල්"
+    url: /si/getting-started/#page_3
+
 
