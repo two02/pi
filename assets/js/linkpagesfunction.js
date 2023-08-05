@@ -1,15 +1,15 @@
-const main = document.getElementById('main');
-  const lis = main.getElementsByTagName('li');
+const nav = document.getElementsByClassName('nav__items')[0];
+  const lis = nav.getElementsByTagName('li');
   const back = document.getElementById('back');
   const next = document.getElementById('next');
   
   
   
-  [...lis].forEach(li => {
+  /*[...lis].forEach(li => {
       li.addEventListener('click', function() {
           gotoElement([...lis].indexOf(this));
       });
-  });
+  });*/
   
   back.addEventListener('click', function() {
       let currents = document.getElementsByClassName("myactive");
@@ -26,9 +26,9 @@ const main = document.getElementById('main');
   
   
   function gotoElement(i) {
-      let activeLis = main.getElementsByClassName('myactive');
-      activeLis[0]?.classList.remove('myactive');
-      lis[i].classList.add('myactive');
+      //let activeLis = main.getElementsByClassName('myactive');
+      //activeLis[0]?.classList.remove('myactive');
+      //lis[i].classList.add('myactive');
       lis[i].children[0].click()
       switch (i) {
        case 0:
