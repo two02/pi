@@ -15,11 +15,18 @@ main:
 
 getting-started-si:
   - title: "getting-started"
-    url: /si/getting-started/#page_1
+    url: /si/getting-started/#getting-started
   - title: "මොකක්ද ගන්න ඕන raspberry pi එක."
-    url: /si/getting-started/#page_2
+    url: /si/getting-started/#which-raspberry-pi
   - title: "මොනවද අවශ්‍ය කරන අනිත් දේවල්"
-    url: /si/getting-started/#page_3
+    url: /si/getting-started/#other-things-you-want
+  - title: "SD card එක setup කරගමු"
+    url: /si/getting-started/#setup-your-sd-card
+  - title: "රාස්බෙරි පයි එක connect කරගමු"
+    url: /si/getting-started/#connect-the-pi
+  - title: "රාස්බෙරි පයි එක start up කරමු."
+    url: /si/getting-started/#startup-the-raspberry-pi
+    
 
 getting-started:
   - title: "getting-started"
