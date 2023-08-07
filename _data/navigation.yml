@@ -30,7 +30,17 @@ getting-started:
     url: /getting-started/#page_3
 
 pac-man-tressure-hunt:
-  - title: "Pac-Man T"
+  - title: "Introduction"
     url: /pac-man-treasure-hunt/
+  - title: "start the treasure hunt"
+    url: /start-the-treasure-hunt/
   - title: "Navigate the Terminal"
     url: /how-to-navigate-the-terminal/
+  - title: "catch your first ghost"
+    url: /catch-your-first-ghost/
+  - title: "catch all the ghosts"
+    url: /catch-all-the-ghosts/
+
+scratch:
+  - title: "Installation"
+    url: /programming-with-scratch-installation/

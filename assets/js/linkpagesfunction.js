@@ -30,20 +30,6 @@ const nav = document.getElementsByClassName('nav__items')[0];
       //activeLis[0]?.classList.remove('myactive');
       //lis[i].classList.add('myactive');
       lis[i].children[0].click()
-      switch (i) {
-       case 0:
-           back.style.display = 'none';
-           next.style.display = 'inline';
-           break;
-       case sections.length-1:
-           next.style.display = 'none';
-           back.style.display = 'inline';
-           break;
-       default:
-           back.style.display = 'inline';
-           next.style.display = 'inline';
- 
-   }
   }
   
 
@@ -63,3 +49,23 @@ function getIndexOfUrl() {
 
   //refreshing on loading
   //getIndexOfUrl()
+
+function onloadButtons() {
+  let activeLi = main.getElementsByClassName('myactive')[0];
+  let i = [...lis].indexOf(activeLi)
+  switch (i) {
+    case 0:
+        back.style.display = 'none';
+        next.style.display = 'inline';
+        break;
+    case lis.length-1:
+        next.style.display = 'none';
+        back.style.display = 'inline';
+        break;
+    default:
+        back.style.display = 'inline';
+        next.style.display = 'inline';
+      }
+}
+
+onloadButtons()
