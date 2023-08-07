@@ -8,12 +8,11 @@ classes: wide
 
 
 {% capture tag %}{{ page.title | downcase }}{% endcapture %}
+{% assign both_posts = site.tags[tag] | where_exp: "item", "item.hidden != true" %}
 {% if page.categories == "si" %}
-    {% assign both_posts = site.tags[tag] %}
     {% assign posts = both_posts | where: "categories", "si" %}
 
 {% else %}
-    {% assign both_posts = site.tags[tag] %}
     {% assign posts = both_posts | where_exp: "item", "item.categories == empty" %}
 {% endif %}
 <div class="mygrid-container">

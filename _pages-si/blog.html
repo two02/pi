@@ -11,7 +11,7 @@ header:
 ---
 
 <div class="myblog-grid-container">
-  {% assign posts = site.posts | where: "categories", "si" %}
+  {% assign posts = site.posts | where_exp: "item", "item.hidden != true" | where: "categories", "si" %}
 
     {% for post in posts %}
 
