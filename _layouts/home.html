@@ -13,10 +13,10 @@ layout: myarchive
 {% endif %}
 
 {% if page.categories == "si" %}
-    {% assign posts = posts | where: "categories", "si" %}
+    {% assign posts = posts | where_exp: "item", "item.hidden != true" | where: "categories", "si" %}
 
 {% else %}
-  {% assign posts = posts | where_exp: "item", "item.categories == empty" %}
+  {% assign posts = posts | where_exp: "item", "item.hidden != true" | where_exp: "item", "item.categories == empty" %}
 {% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
