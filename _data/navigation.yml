@@ -30,11 +30,17 @@ getting-started-si:
 
 getting-started:
   - title: "getting-started"
-    url: /getting-started/#page_1
-  - title: "මොකක්ද ගන්න ඕන raspberry pi එක."
-    url: /getting-started/#page_2
-  - title: "මොනවද අවශ්‍ය කරන අනිත් දේවල්"
-    url: /getting-started/#page_3
+    url: /getting-started/#getting-started
+  - title: "Which RPi to buy"
+    url: /getting-started/#which-raspberry-pi
+  - title: "Other things you need"
+    url: /getting-started/#other-things-you-want
+  - title: "Set up your SD card"
+    url: /getting-started/#setup-your-sd-card
+  - title: "Connect Your RPi"
+    url: /getting-started/#connect-the-pi
+  - title: "Start up your RPi."
+    url: /getting-started/#startup-the-raspberry-pi
 
 pac-man-tressure-hunt:
   - title: "Introduction"
