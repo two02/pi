@@ -28,45 +28,57 @@ sidebar:
   
   <h4>What Raspberry Pi to buy?
   </h4>
-  <p>රාස්බෙරි පයි වර්ග ගොඩක් තියෙනවා. ඒත් ගොඩක් අය තෝරගන්නෙ රාස්බෙරි පයි 4 model B. ඒක තමා අලුත්ම, වේගවත්ම හා වඩාත් පහසුවෙන්ම භාවිතා කරන්න පුලුවන් රාස්බෙරි පයි එක.එකෙත් ram එක 2GB එක ගොඩක් වැඩ කරගන්න ඇති.
+  <p>There are several types of Raspberry Pis. But the most popular one is the RPi 4 model B. It is the latest, fastest, and most user-friendly RPi. The RPi with RAM 2GB is more than enough for most use cases.
   </p>
   <p><img src="{{ site.baseurl }}/static/2023/04/raspberry_pi_4-removebg-preview.png" /> </p>
-  <p><span style="font-size: x-small;">මේ තියෙන්නෙ රාස්බෙරි පයි 4එකක්. image reference: ranspberrypi.org</span><span style="font-size: x-small;"></span></p>  </p>
-  <p>මීට වඩා පොඩි රාස්බෙරි පයි වර්ගත් තියෙනවා. රාස්බෙරි පයි zero කියන්නේ එවගෙ එකක්. ඒවට current එක යනව අඩු නිසා රොබෝල හදන්න වගේ ගැලපෙනවා.
+  <p><span style="font-size: x-small;">This is an RPi 4. image reference: ranspberrypi.org</span></p>
+  <p>There are smaller RPi versions too. Raspberry Pi is one such version. Since the power consumption of smaller RPis is lower, those are suitable for building robots.
   </p>
-  <p>ඒත් රාස්බෙරි පයි 4 එක පාවිච්චි කරන්න ලේසි නිසා ඒකෙන් මුලින් prototype එකක් හදල පස්සේ ඔන්නම් පොඩි එක්කට මාරු වෙන එක ලේසියි.
+  <p>But since RPi 4 is easy to use, you can build the prototype with it and then use a smaller version in production.
   </p>
 </section>
 
 <section id="other-things-you-want" class="display-section">
   
-  <h4>මොනවද අවශ්‍ය කරන අනිත් දේවල්
+  <h4>Other things you want.
   </h4>
 
   <ul>
-    <li><span>micro SD card එකක්<br />රාස්බෙරි පයිවල files සහ OS(operating system) එක කියන දෙකම save කරගන්න hard drive එක වගේ වැඩ කරන්නේ මේ SD card එක. </span></li>
+    <li><span>A micro SD card
+    <br />In RPis, files and OS both saved on to the SD card. IT acts as the hard drive for RPi.</span></li>
     </ul>
     <p><span><img src="{{ site.baseurl }}/static/2023/04/sd-card-e1682429198583-300x220.png" width="170" height="125" alt=""/></span></p>
-    <p><span>අඩුම තරමේ 8GB SD card එකක්වත් ඕන කරනව. රාස්බෙරි පයිවලටම setup කරපු SD card උනත් ගන්න තියෙනවා.</span></p>
+    <p><span>The SD card should be at least 8GB in size. There are SD cards that are already set up with RPi Os too.</span></p>
     <ul>
-    <li>Key board and mouse<br />රාස්බෙරි පයි එක set up කරගන්න USB keyboard එකක් ඕන වෙන්ව.<br />Set up කරගත්තට පස්සේ bluetooth keyboard එකක් mouse එකක් උනත් පාවිච්චි කරන්න පුලුවන්.</li>
-    <li>Tv එකක් හෝ monitor එකක්<br />රාස්බෙරි පයිවල screen එකක් නැති නිසා monitor එකක් වෙනම set කරගන්න වෙන්වා.<br />Screen එකේ built-in speakers තියෙනවානම් රාස්බෙරි පයි එකට sounds play කරන්නත් පුලුවන්.</li>
-    <li><span>Monitor එකක් keyboard එකක් නැති නම්<a href="https://pi.lk/uncategorized/headless-raspberry-pi-set-up/"> Headless විදිහට set up</a> කරගන්නත් පුලුවන්.</span></li>
-    <li>HDMI<br />ඔයගෙ රාස්බෙරි පයි එකේ HDMI output port එක්කුත් තියෙනවා. අලුත් tv monitor ගොඩාක් එක්ක ඒක වැඩ කරනවා.<br />සමහර monitorවල DVI හෝ VGA ports තියෙන්නත් පුලුවන.(ඒව ගැනත් කියනවා)<br />රාස්බෙරි පයි 4 එකේ micro HDMI port දෙකක් තියෙනවා. ඒනිසා monitor දෙකක් ගහන්නත් පුලුවන්.<br />ඔයාට micro HDMI to HDMI කේබල් එකක් හෝ standard HDMI to HDMI කේබල් එකක් සහ micro HDMI to HDMI adapter එකක් ඕන වෙනව රාස්බෙරි පයි එක screen එකට සම්බන්ධ කරගන්න.<br />රාස්බෙරි පයි 1,2 සහ 3වල තියෙන්නේ full-size HDMI port. එනිසා කෙලින්ම standard HDMI to HDMI කේබල් එක්කින් screen එක connect කරගන්න පුලුවන්.</li>
+    <li>Key board and mouse<br />You will need a USB Keyboard to set up the RPi.
+    <br />After the setup, you can also use a Bluetooth keyboard and mouse.</li>
+    <li>a TV or a Monitor<br />Since RPis don't have screens, you have to connect a monitor.
+      If the screen has built-in speakers, it can also play sounds.</li>
+    <li><span>      If you don't have a monitor, set your RPi in the.<a href="https://pi.lk/uncategorized/headless-raspberry-pi-set-up/">headless method</a></span></li>
+    <li>HDMI<br />There is an HDMI port in your RPi. Most of the new TVs and monitors work with HDMI.
+    <br />There are two Micro HDMI ports in RPi 4. Therefore RPi 4 can connect to two monitors.
+    <br />You will need a micro HDMI to HDMI cable or an adapter to connect RPi 4 to a screen.<br />RPi 1,2 and 3 have full-size HDMI ports.  So You can use a standard HDMI to HDMI cable for connecting a screen.</li>
     </ul>
-    <p><span>රාස්බෙරි පයි 3 එක්ක HDMI port එක</span><br /><img src="{{ site.baseurl }}/static/2023/04/raspberrypi3-HDMI-port-e1682432577215.png" /></p>
+    <p><span>HDMI port of a RPi 3.</span><br /><img src="{{ site.baseurl }}/static/2023/04/raspberrypi3-HDMI-port-e1682432577215.png" /></p>
     <p>&nbsp;</p>
     <ul>
-    <li>DVI<br />ඔයාගෙ screen එකේ DVI port එකක් නම් තියෙන්නෙ HDMI to DVI කේබල් එක්කින් connect කරන්න.</li>
-    <li>VGA<br />සමහර screen වල VGA port තියෙන්නෙ. එතොකට ඔයාට පුලුවන් HDMI to VGA adapter එකක් පාවිච්චි කරන්න.</li>
+    <li>DVI<br />If Your screen has a DVI port, use a HDMI to DVI cable.</li>
+    <li>VGA<br />Some screens have VGA ports. In that case, You can use HDMI to VGA adapter.</li>
     </ul>
-    <p>වැඩිපුර බඩු</p>
+    <p>Additional Equipment.
+    </p>
     <ul>
-    <li>කේස් (case) එකක්<br />ඔයාට පුලුවන් ඕනිනම් case එකක් ගන්න ඔයාගෙ රාස්බෙරි පයි එකට. මේක අනිවාර්ය නෑ.. ඒත් රාස්බෙරි පයි එකේ ආරක්ෂාවට හොදයි.</li>
-    <li>Headphones හෝ speakers<br />ලොකු රාස්බෙරි පයි model වල (රාස්බෙරි පයි zero වගේ ඒවා නැතුව) standard audio port එකක් තියෙනවා.<br />කලින් කිවා වගේ screen එකේ built-in speakers තියේනම් ඒවගෙනුත් sound play කරන්න පුලුවන්.</li>
-    <li>Ethernet කේබල් එකක්<br />ලොකු රාස්බෙරි පයි modelවල standard ethernet port එක්කුත් තියෙනවා internet එකට connect වෙන්න.<br />රාස්බෙරි පයි zero වගේ එක්කට USB to Ethernet adapter එකක් පාවිච්චි කරන්න පුලුවන්.</li>
+    <li>A Protective Case.
+    <br />This is not mandatory but good for the protection of your RPi.
+    </li>
+    <li>Headphones or speakers.
+    <br />Bigger versions of RPis(except versions like RPi Zero) have audio ports. As I said earlier, if the screen has built-in speakers, those also can play sound.
+    </li>
+    <li>Ethernet cable
+    <br />Bigger versions of RPi have Standard ethernet ports. For RPi like RPi Zero, a USB to Ethernet adapter can be used.
+    </li>
     </ul>
-    <p>රාස්බෙරි පයි 4, රාස්බෙරි පයි 3 සහ රාස්බෙරි පයි zero wifi වලිනුත් internet එකට connect කරන්න පුලුවන්</p>
+    <p>The RPi 3, 4, and Zero can connect to the internet via Wifi.</p>
 </section>
 
 {% include pagebreaker.html %}
