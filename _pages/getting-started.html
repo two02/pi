@@ -81,4 +81,71 @@ sidebar:
     <p>The RPi 3, 4, and Zero can connect to the internet via Wifi.</p>
 </section>
 
+<section id="setup-your-sd-card" class="display-section">
+  <h4>Set up your SD card.
+  </h4>
+    <p><span>Since your sd card doesn't have the RPi OS installed yet, let's install the OS easily.</span></p>
+    <h4><span><strong>Let's install the RPi OS through Raspberry Pi Imager.</strong></span></h4>
+    <p><span>This is the easiest way to install the OS. And note that, RPi OS is not the only  OS you can install on an RPi. RPi imager also provides several  OSs to install.</span></p>
+    <p><strong>Download and Launch Raspberry Pi Imager.</strong></p>
+    <p><span>Go to the<a href="https://www.raspberrypi.com/software/">Raspberry Pi Downloads</a> page.</span></p>
+    <p><img src="{{ site.baseurl }}/static/2023/04/Screenshot-from-2023-04-25-08.45.50@2x-e1682392684189.png" /></p>
+    <p><span>Click the download link suitable for your PC.</span></p>
+    <p><span>After the download, click on the Imager icon and launch it. Connect your SD card to your PC using an adapter.</span></p>
+    <p><strong>Use of RPi imager.</strong><br /><span>When formatting the SD card using the Imager, the files already on the SD card get overwritten. Therefore don't forget to back up your Sd card before formatting.</span></p>
+    <p><span>Sometimes your PC's OS can prevent you from running the Imager. For example, the following message can appear in a Windows OS.</span></p>
+    <p><img src="{{ site.baseurl }}/static/2023/04/Screenshot-from-2023-04-25-08.49.14@2x-e1682392827650.png" /></p>
+    <p><span>If this message appears, click more info and then click run anyway.</span><br /><span>Install and run the Imager by following the instructions.</span></p>
+    <p><span>Insert your Sd card into your PC, and in the Imager, select the OS you want to install and select the inserted SD card.</span><br><span>Note:  For the first time, the RPi imager has to download the OS you selected. Therefore you have to have an internet connection.
+      Then that downloaded version is cached to the Imager and can be used while offline.</span></p>
+    <p><img src="{{ site.baseurl }}/static/2023/04/Screenshot-from-2023-04-25-00.11.55@2x-1.png" /></p>
+    <p>&nbsp;</p>
+    <p><span>Next, click the write button.</span></p>
+    <p>&nbsp;</p>
+    <p><span>Wait until the writing finishes.</span><br /><span>When the below message appears, you can eject the SD card.</span></p>
+    <p><span></span></p>
+    <p><img src="{{ site.baseurl }}/static/2023/04/Screenshot-from-2023-04-25-00.37.13@2x-e1682392924100.png" /> </p>
+</section>
+
+<section id="connect-the-pi" class="display-section">
+  <h4>රාස්බෙරි පයි එක connect කරගමු</h4>
+<p><span>දැන් අපි රාස්බෙරි පයි එකට ඉතුරු ඒවා ටික connect කරගමු. </span><br /><span>හරි port එකට connect කරගන්න එක device එකේ සහ componentවල ආරක්ෂාවට ඉතාමත් වැදගත්.</span><span></span></p>
+<blockquote></blockquote>
+<p><span>මේ තියෙන්නෙ රාස්බෙරි පයි 3එකක්<br /><img src="{{ site.baseurl }}/static/2023/04/labelled-rasberry-pi3.png" /></span></p>
+<blockquote></blockquote>
+<p><span>මේ තියෙන්නෙ රාස්බෙරි පයි 4එකක්<br /></span><img src="{{ site.baseurl }}/static/2023/04/labelled-rasberry-pi4.png" /><span></span></p>
+<p><span></span></p>
+<p><span>ඔයාගෙ setup කරගත් microSD card එක insert කරගන්න. ඒකේ <strong>slot එක තියෙන්නෙ රාස්බෙරි පයි එකේ යට පැත්තේ.</strong></span></p>
+<p><span>ඔයාගෙ mouse එක USB port එක්කට connect කරන්න. (රාස්බෙරි පයි එකේ ඕන USB port එක්කට ගහන්න පුලුවන්.)</span></p>
+<p><span>ඒ විදිහටම keyboard එකත් connect කරගන්න.</span></p>
+<p><span>ඔයා පාවිච්චි කරන්න ඉන්න screen එක on කරල තියාගන්න.</span><br /><span>රාස්බෙරි පයි එකේ HDMI port එකට screen එක connect කරගන්න. ඕන උනොත් adapter එකක් පාවිච්චි කරන්න.</span></p>
+<p><span> Note: සමහර රාස්බෙරි පයිවල HDMI port දෙකක් තියෙනවා. (රාස්බෙරි පයි 4 එහෙම) </span><br /><span> එහෙම වෙද්දි ඔයාගෙ screen එක රාස්බෙරි පයි එකේ HDMI0 කියන port එකට connect කරගන්න. රාස්බෙරි පයි 4 වලනම් ඒක තියෙන්නෙ power in port එකට ලගම.</span><br /><span> ඊට පස්සෙ ඕන්නම් දෙවෙනි screen එක්කුත් connect කරගන්න පුලුවන් අනිත් port එකෙන්.</span></p>
+<p><span>රාස්බෙරි පයි 1,2,3 වල නම් එක HDMI port එකයි තියෙන්නෙ. ඒකට screen එක connect කරගන්න.</span></p>
+<p><span>තාම මුකුත් screen එකේ පේන්නේ නෑ. මොකද රාස්බෙරි පයි එක තාම On කරල නැති නිසා.</span></p>
+<p><span>ඔයාට රාස්බෙරි පයි එක ethernet වලින් internet එකට connect කරගන්න ඕන්නම් ethernet cable එකක් ethernet port එකට connect කරගන්න. Ethernet කේබල් එකේ අනිත් පැත්ත router එකට හෝ ethernet socket එකට connect කරගන්න.</span><br /><span>Wifi පාවිච්චි කරනවනම් හෝ internet ඕනිම නැත්තම් මේක කරන්න ඕනි නෑ.</span></p>
+<p><span>ඔයා පාවිච්චි කරන screen එකේ speakers තියෙනවානම් ඒවගෙන් සද්දෙ අහන්න පුලුවන්. නැත්තම් audio port එකට headphone හෝ speakers connect කරගන්න පුලුවන්.</span></p>
+</section>
+
+<section id="startup-the-raspberry-pi" class="display-section">
+  <h4>රාස්බෙරි පයි එක start up කරමු.</h4>
+    <p><span>ඔයාගෙ රාස්බෙරි පයි එකට වෙනම power switch එකක් නෑ. Current එකට ගහපු ගමන් ඒක on වෙනවා.</span><br /><span>Power supply එක plug එක්කට ගහල රාස්බෙරි පයි එකේ power port එකට connect කරන්න.</span></p>
+    <p><span>ඔයාට රතු පාට LED එකක් පත්තු වෙනවා පෙනෙයි. දැන් අපේ රාස්බෙරි පයි එක boot වෙන ගමන් තියෙන්නේ</span><span>.</span></p>
+    <p><span><img src="{{ site.baseurl }}/static/2023/04/pi-booting-up-e1682427467922.png" /></span></p>
+    <p><span> දැන් ඔයාගේ screen එකෙ උඩ වම් පත්තේ රාස්බෙරි ටිකක් පෙනෙයි.</span></p>
+    <p><img src="{{ site.baseurl }}/static/2023/04/rasberries-on-startup.png" width="264" height="80" /></p>
+    <p><span> තව ටික්කින් රාස්බෙරි පයි dekstop එක ඔයාට පෙන්න ගනියි.</span></p>
+    <p><span> ඔයා පලවෙනි පාරට රාස්බෙරි පයි එකක් start up කරද්දි "Welcome to Raspberry Pi " කියල application එකක් pop up වෙලා මුල් setup එක ගැන පොඩි guide එකක් දෙයි.</span></p>
+    <p><span>ඒකේ කියන විදිහට next දීල country, language, timezone එහෙම set කරගන්න.</span></p>
+    <p><span>ඊලඟට ඔයාගෙ username එකයි password එකයි set කරගන්න.</span></p>
+    <p><span><img src="{{ site.baseurl }}/static/2023/04/welcometorpi-app.png" /></span></p>
+    <p><span> Desktop එක monitor එක පුරාම තියෙන විදිහට ඔයාගෙ screen එක setup කරගන්න.</span></p>
+    <p><span><img src="{{ site.baseurl }}/static/2023/04/screen-adjusting.png" /></span></p>
+    <p><span></span></p>
+    <p><span>Wifi connect කරගන්න.</span><br /><span>(ඔයාගෙ රාස්බෙරි පයි model එකේ wifi නැත්තම් ඔයාට මේක පේන එකක් නෑ.)</span></p>
+    <p><span>Wifi connect වෙලා හරි වෙලාව පෙන්නනකන් ඉදල software update එකට check කරන්න කැමති නම් next දෙන්න ඊලඟට. නැත්තම් skip කරන්න.</span></p>
+    <p><span>අන්තිමට Restart කියන එක ඔබන්න.Restart උනාට පස්සේ set up කිරිම ඉවරයි. </span></p>
+    <p><span>ප්‍රශ්නයක් තිබ්බොත් comment එකක් දාන්න අමතක කරන්න එපා.</span></p>
+</section>
+
+
 {% include pagebreaker.html %}
