@@ -2,7 +2,7 @@
 layout: posts
 title: Treasure hunt එක පටන්ගමු.
 date: 2023-05-02 06:17:10.000000000 +05:30
-categories:
+categories: si
 tags: []
 hidden: true
 author:
@@ -13,7 +13,7 @@ author:
   last_name: ''
 
 sidebar:
-  nav: pac-man-tressure-hunt
+  nav: pac-man-tressure-hunt-si
 
 ---
 <p><span>මේක පටන් ගන්න මුලින්ම කරන්න තියෙන්නෙ Pac-Man ghost ලා ටික නිදහස් කරන file එක download කරගන්න. </span></p>

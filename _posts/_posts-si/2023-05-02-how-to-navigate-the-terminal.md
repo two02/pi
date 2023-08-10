@@ -2,7 +2,7 @@
 layout: posts
 title: කොහොමද terminal එකේ එහෙට මෙහෙට යන්නේ.
 date: 2023-05-02 06:40:20.000000000 +05:30
-categories: 
+categories: si
 tags: [Pac-Man treasure hunt]
 hidden: true
 author:
@@ -13,7 +13,7 @@ author:
   last_name: ''
 
 sidebar:
-  nav: pac-man-tressure-hunt
+  nav: pac-man-tressure-hunt-si
 
 ---
 <p><span>දැන් අපි කියල දෙන්න යන්නේ terminal එහෙට්ට මෙහෙට්ට navigate වෙන්නෙ කොහොමද කියල හරියට Pac-Man එයාගේ maze එකේ එහෙට මෙහෙට යනව වගේ.</span></p>

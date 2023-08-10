@@ -2,7 +2,7 @@
 layout: posts
 title: පළාවෙනි  ghostව අල්ලමු.
 date: 2023-05-06 02:02:25.000000000 +05:30
-categories:
+categories: si
 tags: [Pac-Man treasure hunt]
 hidden: true
 author:
@@ -13,7 +13,7 @@ author:
   last_name: ''
 
 sidebar:
-  nav: pac-man-tressure-hunt
+  nav: pac-man-tressure-hunt-si
 
 ---
 <h4><span>අපේ පළවෙනි ghostව අල්ලල ඌව quarantine කරමු.</span></h4>

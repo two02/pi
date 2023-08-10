@@ -2,7 +2,7 @@
 layout: posts
 title: ghostsලා ඔක්කොම අල්ලමු.
 date: 2023-05-06 06:10:00.000000000 +05:30
-categories:
+categories: si
 tags: []
 hidden: true
 author:
@@ -13,7 +13,7 @@ author:
   last_name: ''
 
 sidebar:
-  nav: pac-man-tressure-hunt
+  nav: pac-man-tressure-hunt-si
 
 ---
 <p><span>කලින් ඉගෙන ගත්ත commands පාවිච්චි කරල රාස්බෙරි file system එකේ එහෙට මෙහෙට ගිහින් ghostsලා හොයන්, උන්ව අල්ලලා quarantine කරන්න. </span><br /><span>quarantine folder එකට ගිහින් ghostsලා කීයක් අල්ලලාද කියලා බලන්න.</span></p>

@@ -3,7 +3,7 @@ layout: posts
 title: Pac-Man තේමාව කරගත්ත treasure hunt එකක්
 date: 2023-05-02 05:40:24.000000000 +05:30
 
-categories:
+categories: si
 tags: [games, Pac-Man treasure hunt]
 author:
   login: TharakaJ
@@ -17,7 +17,7 @@ header:
   overlay_filter: 0.5
 
 sidebar:
-  nav: pac-man-tressure-hunt
+  nav: pac-man-tressure-hunt-si
 ---
 රාස්බෙරි පයි terminal එකේ Pac-Man තේමාව කරගත්ත treasure hunt game එකක් ගහමු.
 

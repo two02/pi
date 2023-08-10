@@ -42,18 +42,18 @@ getting-started:
   - title: "Start up your RPi."
     url: /getting-started/#startup-the-raspberry-pi
 
-pac-man-tressure-hunt:
+pac-man-tressure-hunt-si:
   - title: "Introduction"
-    url: /pac-man-treasure-hunt/
+    url: /si/pac-man-treasure-hunt/
   - title: "start the treasure hunt"
-    url: /start-the-treasure-hunt/
+    url: /si/start-the-treasure-hunt/
   - title: "Navigate the Terminal"
-    url: /how-to-navigate-the-terminal/
+    url: /si/how-to-navigate-the-terminal/
   - title: "catch your first ghost"
-    url: /catch-your-first-ghost/
+    url: /si/catch-your-first-ghost/
   - title: "catch all the ghosts"
-    url: /catch-all-the-ghosts/
+    url: /si/catch-all-the-ghosts/
 
-scratch:
+scratch-si:
   - title: "Installation"
-    url: /programming-with-scratch-installation/
+    url: /si/programming-with-scratch-installation/

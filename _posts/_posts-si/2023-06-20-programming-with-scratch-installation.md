@@ -2,7 +2,7 @@
 layout: posts
 title: Scratch එක්ක programming කරමු, game හදමු.
 date: 2023-06-20 07:42:38.000000000 +05:30
-categories:
+categories: si
 tags: [games, projects]
 author:
   login: TharakaJ
@@ -12,7 +12,7 @@ author:
   last_name: ''
 
 sidebar:
-  nav: scratch
+  nav: scratch-si
 ---
 <p><span>Scratch කියන්නේ ඕනම කෙනෙක්ට (විශේෂයෙන් පොඩ්ඩන්ට) ඉතාමත් ඉක්මනින් ඉගෙන ගන්න programming language එකක්. programming ගැන මෙලෝ හසරක් ඔයා දන්නෙ නැත්තම් මෙතන පටන් ගන්න හොද තැනක්.</span></p>
 
