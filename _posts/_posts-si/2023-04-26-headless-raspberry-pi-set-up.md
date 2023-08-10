@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Headless raspberry pi එකක් set up කරගමු
+title: Headless Raspberry Pi එකක් set up කරගමු
 date: 2023-04-26 16:42:37.000000000 +05:30
 type: post
 categories:
