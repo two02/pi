@@ -59,7 +59,7 @@ Installation wizard එකේ කියන විදිහට ලේසියෙ
 <p>ඊලඟට connection type එකයි port එකයි ssh සහ 22 විදිහට තියෙන්න අරින්න.</p>
 <p>ඊලඟට Open button එක click කරන්න.</p>
 <p>PuTTY  එකෙන් security alert එකක් එයි ඒක accept කරන්න.<img src="{{ site.baseurl }}/static/2023/04/putty-alert-e1682525446957.png" /></p>
-<p>දැන් ඔයා කලින් දාපු username password දාල login වෙන්න. ඔයා username password වෙනස් කරේ නැත්තම් difault username:pi සහ password:raspberry<br />
+<p>දැන් ඔයා කලින් දාපු username password දාල login වෙන්න. ඔයා username password වෙනස් කරේ නැත්තම් default username:pi සහ password:raspberry<br />
 දැන් PuTTY වල Raspberry Pi terminal එකක් open වෙයි.<br />
 දැන් ඔයාට පුලුවන් රාස්බෙරි පයි එක ඔයාගෙ desktop එකේ ඉදන් පාවිච්චි කරන්න command line එක පාවිච්චි කරල.</p>
 <p>Mac<br />
