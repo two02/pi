@@ -4,8 +4,6 @@ layout: archive
 
 {{ content }}
 
-{% include comments.html %}
-
 <ul class="taxonomy__index">
 {% capture categories %}{{ page.categories }}{% endcapture %}
 {% if categories == 'si' %}
@@ -39,6 +37,7 @@ layout: archive
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
+    {% include comments.html %}
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}
