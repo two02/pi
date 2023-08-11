@@ -4,6 +4,8 @@ layout: archive
 
 {{ content }}
 
+{% include comments.html %}
+
 <ul class="taxonomy__index">
 {% capture categories %}{{ page.categories }}{% endcapture %}
 {% if categories == 'si' %}
