@@ -16,6 +16,7 @@
     transition: all .2s ease-in-out; 
     background-color:#aaaaaa74;
     text-decoration: none;
+    text-align: center;
 
     h2, p {
       color: black;
@@ -279,7 +280,7 @@ media Query
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .mycolumn  {
-    width: 100%;
+    width: 90%;
   }
   .mygrid-container {
     grid-template-columns: 1fr;
