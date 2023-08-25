@@ -22,7 +22,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "PI.LK"
 description              : "All you need to know about Raspberry Pis."
 URL                      : "https://pi.lk" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/pi" # the subpath of your site, e.g. "/blog"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "two02/pi" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "static/siteimages/default-teaser-image.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "static/siteimages/logo samples-Copy of Copy of Page-12.drawio (1).png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
