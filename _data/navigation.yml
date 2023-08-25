@@ -6,10 +6,10 @@ main:
     #url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Blog"
     url: /blog/
-  - title: "About"
-    url: /about/
-  - title: "Contact"
-    url: /contact/
+  #- title: "About"
+    #url: /about/
+  #- title: "Contact"
+    #url: /contact/
   - title: "Projects"
     url: /projects/
 
