@@ -27,20 +27,22 @@ Let's find out how to set up VNC for your device.
 <br>
 <p>First, you have to enable the VNC server on your RPi. There are several ways for that.
 </p>
-<p>If you already have a monitor and, use a graphical user interface follow these steps.</p>
-<p>Raspberry Pi OS image එකේ VNC මුලින්ම install කරල තියෙන්නේ. පරණ versionවලනම්,<br />
-Menu › Preferences › Recommended Software කියන තැනට ගිහින් VNC install කරගන්න.</p>
+<h3>If you already have a monitor and, use a graphical user interface follow these steps.</h3>
+<p>VNC is already installed in RPi OS's latest versions.<br />
+If it's not, install VNC by following this path.
+Menu › Preferences › Recommended Software</p>
 <p><img src="{{ site.baseurl }}/static/2023/05/menuconfiguration-e1683620630714.png" /></p>
 <br>
-<p>ඊලගට Menu › Preferences › Raspberry Pi Configuration › Interfaces. තැනට ගිහින් VNC enable කරන්න.</p>
+<p>Then, go to Menu › Preferences › Raspberry Pi Configuration › Interfaces and enable VNC.</p>
 <p><img src="{{ site.baseurl }}/static/2023/05/configurationinterfacesvnc.png" /></p>
-<p>ඔයාට monitor එකක් නැත්තම්,</p>
-<p>Raspberry Pi os එක install කරද්දි ssh enable කරගන්න. ssh enable කරගන්න විදිහ <a href="https://pi.lk/uncategorized/headless-raspberry-pi-set-up/" target="_blank" rel="noopener">මේ post</a> එකෙන් බලාගන්න පුලුවන්.(Raspberry Pi os එකේ desktop version එකම install කරගත්තොත් කෙලින්ම ඒ desktop එක load කරගන්න පුලුවන් vnc viewer එකෙන්, නැත්තම් lite version එක install කරොත් ඒකියන්නෙ headless රාස්බෙරි පයි එකක් නම් තියෙන්නෙ ඔයාට virtual desktop එකක් හදාගන්න පුලුවන් vnc එකෙන්ම. )<br />
-ඊට පස්සේ sshවලින් log වෙලා vnc එක install කරගන්න පහල command දෙක type කරන්න.<br />
+<h3>If you don't have a monitor,</h3>
+<p>Enable SSH when installing RPi OS.<a href="https://pi.lk/uncategorized/headless-raspberry-pi-set-up/" target="_blank" rel="noopener">Here</a>, You can find how to enable SSH.<br>
+(If install the desktop version of RPi OS you can use that desktop when connecting via VNC. If you use the lite version of RPi OS which doesn't have a desktop, you can create a virtual desktop with VNC.)<br />
+Then log into RPi with SSH  and run the following commands to install VNC.<br />
 {% include copy.html content="sudo apt update" %}
 <br>
 {% include copy.html content="sudo apt install realvnc-vnc-server realvnc-vnc-viewer" %}
-ඊලගට තියෙන්නෙ vnc එක enable කරගන්න. ඒකට පහල command එක type කරන්න.<br />
+Then you have to enable VNC for that run the below command.<br />
 {% include copy.html content="sudo raspi-config" %}
 එතොකට load වෙන programme එකේ Interfacing Options කියන එකට arrow keys සහ Enter keyවලින් Navigate වෙන්න. පහලට ගිහින් VNC › Yes කියන එක select කරන්න.<img src="{{ site.baseurl }}/static/2023/05/configinterface-options-e1683621692844.png" /></p>
 <p><img src="{{ site.baseurl }}/static/2023/05/interface-optionsvnc-e1683621787672.png" /></p>
