@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: VNC එක්ක monitor එකක් නැතුව රාස්බෙරි පයි desktop එක පාවිච්චි කරමු
+title: The Raspberry Pi desktop without a monitor.
 date: 2023-05-09 08:56:33.000000000 +05:30
 type: post
 categories: 
@@ -18,14 +18,16 @@ header:
   overlay_image: "static/2023/06/featured-image-for-desktop-without-monitor-with-VNC.png"
   overlay_filter: 0.5
 ---
-සමහර වෙලාවට රාස්බෙරි පයි එකේ කෙලින්ම වැඩ කරන්න අමාරුයි. සමහර වෙලාවට monitor එකක් දිගටම රාස්බෙරි පයි එකට වෙන් කරල තියන්න බෑ. නැත්තම් monitor එකක් ඇත්තෙම නෑ, ඒත් desktop version එක පාවිච්චි කරන්න ඕන.<!--end_excerpt-->
-කොහොමද ඔයාගෙ laptop එකේ screen එකෙන්ම රාස්බෙරි පයි එකත් පාවිච්චි කරන්න පුලුවන්නම්.<br> 
+Sometimes, You can't dedicate an entire monitor for your RPi. Or even though you want to use the desktop version, you don't have a monitor.  Is there a way to use your RPi from your laptop's screen?<!--end_excerpt-->
 
 
-VNC(Virtual Network Computing) කියන්නෙ එහෙම කරන්න පාවිච්චි කරන්න පුලුවන් graphical desktop sharing system එකක්. VNC Viewer එක ඔයාගේ keyboard, mouse හෝ touch events පවා VNC Server එකට transmit කරනවා. VNC Server එකත් එහෙම එන inputs receive කරල ඒවා update කරනවා screen එකට.එහෙනම් බලමු කොහොමද මේක set up කරගන්නේ කියල.
-<p>මුලින්ම ඔයා VNC Server එක ඔයාගේ රාස්බෙරි පයි එකෙන් enable කරන්න ඕන.<br />
-මේක කරන්න විදි කිහිපයක් තියෙනවා.</p>
-<p>ඔයා දැනටමත් monitor එකක් set කරන් graphical user interface එකනම් පාවිච්චි කරන්නේ,</p>
+VNC (Virtual Network Computing) is a system that allows you to share your graphical desktop.
+And also it captures your keyboard, mouse, and touch events. The Viewer transmits those events to the VNC server. The VNC server on RPi receives those inputs and updates them on the RPi.(or any other device you connect this way)<br>
+Let's find out how to set up VNC for your device.
+<br>
+<p>First, you have to enable the VNC server on your RPi. There are several ways for that.
+</p>
+<p>If you already have a monitor and, use a graphical user interface follow these steps.</p>
 <p>Raspberry Pi OS image එකේ VNC මුලින්ම install කරල තියෙන්නේ. පරණ versionවලනම්,<br />
 Menu › Preferences › Recommended Software කියන තැනට ගිහින් VNC install කරගන්න.</p>
 <p><img src="{{ site.baseurl }}/static/2023/05/menuconfiguration-e1683620630714.png" /></p>
