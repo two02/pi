@@ -1,16 +1,20 @@
 /* for index page bg */
 #index-first-bg {
-  background-image: url("../../static/siteimages/00128-3871860158-kids_building.png");
+  background-image: url("/../../static/siteimages/two kids building a robot.png");
   background-size: cover;
-  background-position: 0;
   width: 100%;
+  background-attachment: fixed;
+  background-position: bottom;
+
+  h1 {
+    filter: invert(0.9);
+    padding-top: 0.5em;
+  }  
 }
 
 /* styles used for cards in index.html */
 /* Create four equal columns that floats next to each other */
 .mycolumn {
-    float: left;
-    width: 20%;
     padding: 10px;
     margin: 10px 10px 10px 10px;
     border-radius: 25px;
@@ -28,10 +32,8 @@
   }
 
 /* Clear floats after the columns */
-.myrow:after {
-    content: "";
-    display: table;
-    clear: both;
+.myrow {
+    display: grid;
   }
   
   
@@ -319,26 +321,14 @@ media Query
 /* Responsive layout - makes all the columns with same hight in big screens */
 @media screen and (min-width: 900px) {
   .myrow  {
-    display: flex;}
-  .mytworow {
-    flex: 1;
-    display: flex;
-  }
-  .mycolumn{
-    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 /* Responsive layout - makes two columns two rows with same hight in medium screens */
 @media screen and (min-width: 600px) and (max-width: 900px) {
 .myrow  {
-  display: table;}
-.mytworow {
-  display: flex;
-}
-.mycolumn{
-  flex: 1;
-  width: 40%;
+  grid-template-columns: 1fr 1fr;
 }
 .mygrid-container {
   grid-template-columns: 1fr 1fr;
@@ -346,8 +336,12 @@ media Query
 }  
 
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1440px) {
   .myactive {
     box-shadow: 0 1px 0 0 $link-color;
+  }
+  #index-first-bg {
+    background-attachment: unset;
+    background-position: center;    
   }
 }
