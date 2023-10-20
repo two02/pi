@@ -28,9 +28,9 @@
 
         {% unless pageurl == "/404.html" %}
         {% capture engurl %}{{ pageurl | remove_first: "si/" }}{% endcapture %}
-        <a class="lang-select" href="{{ engurl | relative_url }}"><img src="{{ '/static/siteimages/translate.svg' | relative_url }}" alt="සිං"></a>
+        <a class="lang-select" href="{{ engurl | relative_url }}"><img src="{{ '/static/siteimages/translate to eng.svg' | relative_url }}" alt="සිං"></a>
         {% endunless %}
-        
+
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
