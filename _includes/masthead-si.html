@@ -11,13 +11,6 @@
           {{ site.masthead_title | default: site.title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
-        {% unless pageurl == "/404.html" %}
-        {% capture engurl %}{{ pageurl | remove_first: "si/" }}{% endcapture %}
-        <span class="lang-select">
-        <a id="lang-active" href="{{ pageurl | relative_url }}"><span>සිං</span></a>
-        <a href="{{ engurl | relative_url }}"><span>Eng</span></a>
-        </span>
-        {% endunless %}
 
         <ul class="visible-links">
           {%- for link in site.data.navigation.main -%}
@@ -32,6 +25,12 @@
           <i class="fas fa-search"></i>
         </button>
         {% endif %}
+
+        {% unless pageurl == "/404.html" %}
+        {% capture engurl %}{{ pageurl | remove_first: "si/" }}{% endcapture %}
+        <a class="lang-select" href="{{ engurl | relative_url }}"><img src="{{ '/static/siteimages/translate.svg' | relative_url }}" alt="සිං"></a>
+        {% endunless %}
+        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>

@@ -253,17 +253,10 @@
 
 /* active language masthead styles */
 .lang-select {
-  display: flex;
-  
-  a {
-    margin: 5px;
-  }
+  margin: 0!important;
+  margin-right: 1em!important;
 }
 
-
-#lang-active {
-  border-bottom: 5px solid $primary-color;
-}
 
 
 
@@ -300,9 +293,6 @@ media Query
     p {
       grid-area: 3 / 1;
     }
-  }
-  #lang-active {
-    display: none;
   }
   .myintro {
 
