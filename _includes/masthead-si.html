@@ -28,7 +28,7 @@
 
         {% unless pageurl == "/404.html" %}
         {% capture engurl %}{{ pageurl | remove_first: "si/" }}{% endcapture %}
-        <a class="lang-select" href="{{ engurl | relative_url }}"><img src="{{ '/static/siteimages/translate to eng.svg' | relative_url }}" alt="සිං"></a>
+        <a class="lang-select" href="{{ engurl | relative_url }}"><img src="{{ '/static/siteimages/translate to eng.svg' | relative_url }}" alt="Eng"></a>
         {% endunless %}
 
         <button class="greedy-nav__toggle hidden" type="button">
