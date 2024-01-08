@@ -16,11 +16,12 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "pi.lk"
+title                    : "PI"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "PI.LK"
 description              : "All you need to know about Raspberry Pis."
+si_description           : "රාස්බෙරි පයි ගැන සියලු දේ දැන් සිංහලෙනුත් දැනගන්න."
 URL                      : "https://pi.lk" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "two02/pi" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
